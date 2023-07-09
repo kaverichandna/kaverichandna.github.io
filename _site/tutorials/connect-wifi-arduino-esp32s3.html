@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Connect to a WiFi network with Arduino on ESP32-S3</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/connect-wifi-arduino-esp32s3" />
+  <meta name="description" content="Connect to a WiFi network with Arduino on ESP32-S3">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/connect-wifi-arduino-esp32s3"/>
+  <meta property="og:title" content="Connect to a WiFi network with Arduino on ESP32-S3"/>
+  <meta property="og:description" content="Connect to a WiFi network with Arduino on ESP32-S3"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/esp32s3-prototype.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/connect-wifi-arduino-esp32s3.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Connect to a WiFi network with Arduino on ESP32-S3</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">ESP32-S3-DevKitC-1</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">ESP32-S3-WROOM-1-N8R2</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">wifi</span>
+          
+          <span class="tag is-light">connect</span>
+          
+          <span class="tag is-light">ssid</span>
+          
+          <span class="tag is-light">esp32s3</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/espressif/arduino-esp32">ESP32 Arduino</a></li>
+                
+                <li><a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads">CP210x USB to UART Bridge VCP Drivers</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://www.aliexpress.com/item/1005003979778978.html">ESP32-S3-DevKitC-1-N8R2</a></li>
+                
+                <li><a href="https://www.aliexpress.com/item/32694152202.html">CP2102 USB 2.0 to UART TTL 5PIN Connector Module</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For Arduino INO file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/connect-wifi-arduino-esp32s3" class="button is-primary">Download code</a>
+      <code class="is-size-4">connect-wifi-arduino-esp32s3.ino</code>
+      
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;WiFi.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">"Secret.h"</span><span class="cp">
+</span>
+<span class="c1">// Secret.h</span>
+<span class="c1">// char ssid[] = "secret";</span>
+<span class="c1">// char pass[] = "secret";</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Attempting to connect to SSID: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+
+  <span class="n">WiFi</span><span class="p">.</span><span class="n">useStaticBuffers</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+  <span class="n">WiFi</span><span class="p">.</span><span class="n">mode</span><span class="p">(</span><span class="n">WIFI_STA</span><span class="p">);</span>
+  <span class="n">WiFi</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">pass</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"."</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Connected to WiFi"</span><span class="p">);</span>
+  <span class="n">printWifiStatus</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="kt">void</span> <span class="nf">printWifiStatus</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"SSID: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="n">SSID</span><span class="p">());</span>
+
+  <span class="n">IPAddress</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">localIP</span><span class="p">();</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"IP Address: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ip</span><span class="p">);</span>
+
+  <span class="kt">long</span> <span class="n">rssi</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="n">RSSI</span><span class="p">();</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"signal strength (RSSI):"</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">rssi</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">" dBm"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+
+      <h2 class="title is-2">Makefile</h2>
+      
+<figure class="highlight"><pre><code class="language-make" data-lang="make"><span class="nv">BOARD</span><span class="o">?=</span>esp32:esp32:esp32s3:CDCOnBoot<span class="o">=</span>cdc
+<span class="nv">PORT</span><span class="o">?=</span>/dev/cu.usbmodem14<span class="k">*</span>
+<span class="nv">BUILD</span><span class="o">=</span>build
+<span class="c">## Pass in V=--verbose to output more information than default
+</span>
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">help default lint compile upload clean</span>
+
+<span class="nl">default</span><span class="o">:</span> <span class="nf">clean lint compile upload</span>
+
+<span class="nl">help</span><span class="o">:</span> <span class="c">##</span><span class="nf"> Show help message</span>
+	<span class="p">@</span><span class="nb">awk</span> <span class="s1">'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n"} /^[$$()% 0-9a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } '</span> <span class="nv">$(MAKEFILE_LIST)</span>
+
+<span class="nl">lint</span><span class="o">:</span> <span class="c">##</span><span class="nf"> Lint code using cpplint</span>
+	cpplint <span class="nt">--extensions</span><span class="o">=</span>ino <span class="nt">--filter</span><span class="o">=</span><span class="nt">-legal</span>/copyright,-runtime/int <span class="k">*</span>.ino
+
+<span class="nl">compile</span><span class="o">:</span> <span class="c">##</span><span class="nf"> Compile code and create the firmware binary</span>
+	arduino-cli compile <span class="nv">$(V)</span> <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> <span class="nt">--output-dir</span> <span class="nv">$(BUILD)</span> ./
+
+<span class="nl">upload</span><span class="o">:</span> <span class="c">##</span><span class="nf"> Upload the firmware to the board</span>
+	arduino-cli upload <span class="nv">$(V)</span> <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> <span class="nt">--port</span> <span class="nv">$(PORT)</span> <span class="nt">--input-dir</span> <span class="nv">$(BUILD)</span>
+
+<span class="nl">clean</span><span class="o">:</span> <span class="c">##</span><span class="nf"> Remove all built files</span>
+	<span class="nb">rm</span> <span class="nt">-rf</span> build</code></pre></figure>
+
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/esp32s3-prototype.jpg"><img
+            src="/assets/images/tutorials/esp32s3-prototype.jpg" alt="Connect to a WiFi network with Arduino on ESP32-S3 prototype"></a>
+      </div>
+      
+
+      
+
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/connect-wifi-arduino-esp32s3-console.png"><img
+            src="/assets/images/tutorials/connect-wifi-arduino-esp32s3-console.png" alt="Connect to a WiFi network with Arduino on ESP32-S3 serial console"></a>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>Create a file <code class="language-plaintext highlighter-rouge">Secret.h</code> in the same folder with the code.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>tree
+<span class="nb">.</span>
+├── Secret.h
+└── connect-wifi-arduino-esp32s3.ino
+</code></pre></div></div>
+
+<p>Include the actual Wifi SSID name and password in the file.</p>
+
+<pre><code class="language-h">char ssid[] = "secret";
+char pass[] = "secret";
+</code></pre>
+
+<p>Compile and upload the firmware to connect to the WiFi.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://www.espressif.com/en/products/devkits/esp32-devkitc/overview">Buy the official Espressif devkit</a></li>
+        
+        <li id="footnote-2"><a href="https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf">Schematic of ESP32-S3-DEVKITC-1 V1</a></li>
+        
+        <li id="footnote-3"><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html#pin-layout">Pinouts</a></li>
+        
+        <li id="footnote-4"><a href="https://github.com/espressif/kicad-libraries">KiCad symbol for ESP32-S3-devkitC</a></li>
+        
+        <li id="footnote-5"><a href="https://github.com/espressif/arduino-esp32/blob/master/variants/esp32s3/pins_arduino.h">Arduino Pins</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

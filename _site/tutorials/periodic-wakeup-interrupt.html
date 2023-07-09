@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Periodic or interrupt wakeup</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/periodic-wakeup-interrupt" />
+  <meta name="description" content="Periodic or interrupt wakeup">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/periodic-wakeup-interrupt"/>
+  <meta property="og:title" content="Periodic or interrupt wakeup"/>
+  <meta property="og:description" content="Periodic or interrupt wakeup"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/periodic-wakeup-interrupt-prototype.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/periodic-wakeup-interrupt.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Periodic or interrupt wakeup</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">WeMos D1 Mini</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">ESP8266</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">sleep</span>
+          
+          <span class="tag is-light">wakeup</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/esp8266/Arduino">ESP8266 Arduino</a></li>
+                
+                <li><a href="https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi">ESP8266 WiFi</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://amzn.to/2WKRWe6">WeMos D1 Mini</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For Arduino INO file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/periodic-wakeup-interrupt" class="button is-primary">Download code</a>
+      <code class="is-size-4">periodic-wakeup-interrupt.ino</code>
+      
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;ESP8266WiFi.h&gt;</span><span class="cp">
+#define USERBUTTON 12 // GPIO012 on ESP or D6 on WeMos
+</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">setTimeout</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">userButtonValue</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">USERBUTTON</span><span class="p">);</span>
+
+  <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Wake up!"</span><span class="p">);</span>
+  
+  <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"User button value: "</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">userButtonValue</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">userButtonValue</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"User long pressed button: "</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Do task"</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Going into deep sleep for 10s, unless button pressed..."</span><span class="p">);</span>
+  <span class="n">ESP</span><span class="p">.</span><span class="n">deepSleep</span><span class="p">(</span><span class="mf">10e6</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+<span class="p">}</span></code></pre></figure>
+
+
+      <h2 class="title is-2">Makefile</h2>
+      
+<figure class="highlight"><pre><code class="language-make" data-lang="make"><span class="nv">BOARD</span><span class="o">?=</span>esp8266com:esp8266:d1_mini
+<span class="nv">PORT</span><span class="o">?=</span>/dev/cu.wchusbserial1410
+<span class="nv">BUILD</span><span class="o">=</span>build
+<span class="c"># Arduino CLI version 0.14.0 is used.
+</span>
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">default lint all flash clean</span>
+
+<span class="nl">default</span><span class="o">:</span> <span class="nf">lint all flash clean</span>
+
+<span class="nl">lint</span><span class="o">:</span>
+	cpplint <span class="nt">--extensions</span><span class="o">=</span>ino <span class="nt">--filter</span><span class="o">=</span><span class="nt">-legal</span>/copyright <span class="k">*</span>.ino
+
+<span class="nl">all</span><span class="o">:</span>
+	arduino-cli compile <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> <span class="nt">--output-dir</span> <span class="nv">$(BUILD)</span> ./
+
+<span class="nl">flash</span><span class="o">:</span>
+	arduino-cli upload <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> <span class="nt">--port</span> <span class="nv">$(PORT)</span> <span class="nt">--input-dir</span> <span class="nv">$(BUILD)</span>
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-r</span> build</code></pre></figure>
+
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/periodic-wakeup-interrupt-prototype.jpg"><img
+            src="/assets/images/tutorials/periodic-wakeup-interrupt-prototype.jpg" alt="Periodic or interrupt wakeup prototype"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/periodic-wakeup-interrupt-schematic.jpg"><img
+            src="/assets/images/tutorials/periodic-wakeup-interrupt-schematic.jpg" alt="Periodic or interrupt wakeup schematic"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Arduino IDE settings</h2>
+        <p class="subtitle is-4">Ensure the following IDE settings before flashing.</p>
+        <a href="/assets/images/tutorials/periodic-wakeup-interrupt-arduino-settings.png"><img
+            src="/assets/images/tutorials/periodic-wakeup-interrupt-arduino-settings.png"
+            alt="Periodic or interrupt wakeup Arduino IDE settings"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/periodic-wakeup-interrupt-console.png"><img
+            src="/assets/images/tutorials/periodic-wakeup-interrupt-console.png" alt="Periodic or interrupt wakeup serial console"></a>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>Do something periodically on wake up after deep sleep or by pressing the button on-board.</p>
+
+<p>On WeMos board , the pin <code class="language-plaintext highlighter-rouge">REST</code> to <code class="language-plaintext highlighter-rouge">10kΩ</code> pulled up to <code class="language-plaintext highlighter-rouge">+3V3</code> is already there. Remember to include it back with the <code class="language-plaintext highlighter-rouge">ESP8266</code> module.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://raw.githubusercontent.com/liebman/AnalogClock/master/images/SynchroClock.png">Synchro Clock config pin schematic</a></li>
+        
+        <li id="footnote-2"><a href="https://www.falstad.com/circuit/circuitjs.html?cct=$+1+0.000005+100.89512123094175+50+5+43%0AR+176+128+176+80+0+0+40+3.3+0+0+0.5%0Ag+176+320+176+368+0%0As+96+320+176+320+0+1+true%0Ar+176+272+304+272+0+1000%0Ar+96+128+96+224+0+10000%0Ac+96+224+224+224+0+0.00001+-2.4593660441496468e-11%0Ar+224+128+224+224+0+10000%0Aw+96+128+176+128+0%0Aw+224+128+176+128+0%0Aw+224+224+304+224+0%0Ar+304+224+304+128+0+1000%0Aw+304+128+432+128+2%0Aw+304+224+384+224+2%0Aw+176+272+96+272+0%0Aw+96+224+96+272+0%0Aw+96+272+96+320+0%0Aw+304+272+384+272+2%0As+432+128+528+128+0+1+true%0Ag+528+128+528+160+0%0Ar+432+128+432+80+0+1000%0AR+432+80+432+32+0+0+40+3.3+0+0+0.5%0Ab+400+16+570+179+0%0Ax+394+230+442+233+4+24+RST%0Ax+472+54+558+57+4+24+GPIO16%0Ax+396+282+482+285+4+24+GPIO12%0A)">Circuit simulation</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

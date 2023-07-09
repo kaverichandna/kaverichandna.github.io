@@ -1,0 +1,14 @@
+I"ì<p>This example contains a simple blinky program for the ESP32-based T-Beam by Xinyuan LilyGO version <code class="language-plaintext highlighter-rouge">T22_V1.1, 20191212</code>.</p>
+
+<ol>
+  <li>
+    <p>Setup <code class="language-plaintext highlighter-rouge">arduino-cli</code> or Arduino IDE with <a href="https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md">boards URL for ESP32</a></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+</code></pre></div>    </div>
+  </li>
+  <li>Install <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">SiLabs CP210x USB to UART Bridge VCP Drivers</a> for macOS</li>
+  <li>Flash the blinky firmware with the <code class="language-plaintext highlighter-rouge">make</code> command.</li>
+  <li>The RED LED underneath the display should blink.</li>
+</ol>
+:ET

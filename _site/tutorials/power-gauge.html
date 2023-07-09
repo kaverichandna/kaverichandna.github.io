@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Power gauge</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/power-gauge" />
+  <meta name="description" content="Power gauge">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/power-gauge"/>
+  <meta property="og:title" content="Power gauge"/>
+  <meta property="og:description" content="Power gauge"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/power-gauge-prototype.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/power-gauge.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Power gauge</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">Arduino UNO</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">tool</span>
+          <span class="tag is-light">USB Power gauge</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">usb</span>
+          
+          <span class="tag is-light">power</span>
+          
+          <span class="tag is-light">gauge</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+
+    <div class="columns is-desktop">
+      
+
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://amzn.to/3xbq53W">Arduino UNO R3</a></li>
+                
+                <li><a href="https://www.adafruit.com/product/1549">Adafruit power gauge mini kit</a></li>
+                
+                <li><a href="https://s.click.aliexpress.com/e/_9v08HQ">USB to UART CP2102 board</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/power-gauge-prototype.jpg"><img
+            src="/assets/images/tutorials/power-gauge-prototype.jpg" alt="Power gauge prototype"></a>
+      </div>
+      
+
+      
+
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/power-gauge-console.png"><img
+            src="/assets/images/tutorials/power-gauge-console.png" alt="Power gauge serial console"></a>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>Measure power consumption and current draw from a circuit.</p>
+
+<p>Connect the USB power gauge to the USB-TTL board.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>USB Power Gauge</th>
+      <th>USB-TTL Board</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Connect</td>
+      <td><code class="language-plaintext highlighter-rouge">GND</code></td>
+      <td><code class="language-plaintext highlighter-rouge">GND</code></td>
+    </tr>
+    <tr>
+      <td>Connect</td>
+      <td><code class="language-plaintext highlighter-rouge">TX</code></td>
+      <td><code class="language-plaintext highlighter-rouge">RX</code></td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://www.adafruit.com/product/1549">Adafruit USB Power Gauge Mini-Kit</a></li>
+        
+        <li id="footnote-2"><a href="https://github.com/adafruit/USB-Power-Gauge">USB-Power-Gauge GitHub source code</a></li>
+        
+        <li id="footnote-3"><a href="https://learn.adafruit.com/adafruit-usb-power-gauge-mini-kit/overview">Adafruit USB Power Gauge Mini-Kit tutorial</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

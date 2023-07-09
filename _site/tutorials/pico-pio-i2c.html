@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - PIO I2C Bus Scan with Pico</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/pico-pio-i2c" />
+  <meta name="description" content="PIO I2C Bus Scan with Pico">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/pico-pio-i2c"/>
+  <meta property="og:title" content="PIO I2C Bus Scan with Pico"/>
+  <meta property="og:description" content="PIO I2C Bus Scan with Pico"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/pico-pio-i2c-prototype.png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/pico-pio-i2c.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">PIO I2C Bus Scan with Pico</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">RaspberryPI Pico</span>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">C</span>
+        </div>
+      </div>
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">C++</span>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">RP2040</span>
+        </div>
+      </div>
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">Si7021</span>
+        </div>
+      </div>
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">VCNL4000</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf">Pico toolchain</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                
+                <li><a href="./blinky-pico">Blinky Pico</a></li>
+                
+                <li><a href="./pico-i2c">I2C Bus Scan with RPi pico</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://amzn.to/3sKa5Cv">Raspberry PI Pico</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For C/C++ file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/pico-pio-i2c" class="button is-primary">Download code</a>
+      <code class="is-size-4">pico-pio-i2c.c</code>
+      
+        
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">"pico/stdlib.h"</span><span class="cp">
+#include</span> <span class="cpf">"pio_i2c.h"</span><span class="cp">
+</span>
+<span class="cp">#define PIN_SDA 16
+#define PIN_SCL 17
+</span>
+<span class="n">bool</span> <span class="nf">reserved_addr</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">addr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">addr</span> <span class="o">&amp;</span> <span class="mh">0x78</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="p">(</span><span class="n">addr</span> <span class="o">&amp;</span> <span class="mh">0x78</span><span class="p">)</span> <span class="o">==</span> <span class="mh">0x78</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">stdio_init_all</span><span class="p">();</span>
+
+  <span class="n">PIO</span> <span class="n">pio</span> <span class="o">=</span> <span class="n">pio0</span><span class="p">;</span>
+  <span class="n">uint</span> <span class="n">sm</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">uint</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">pio_add_program</span><span class="p">(</span><span class="n">pio</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i2c_program</span><span class="p">);</span>
+  <span class="n">i2c_program_init</span><span class="p">(</span><span class="n">pio</span><span class="p">,</span> <span class="n">sm</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">PIN_SDA</span><span class="p">,</span> <span class="n">PIN_SCL</span><span class="p">);</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">PIO I2C Bus Scan</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">addr</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">addr</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span><span class="p">);</span> <span class="o">++</span><span class="n">addr</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">addr</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%02x "</span><span class="p">,</span> <span class="n">addr</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">reserved_addr</span><span class="p">(</span><span class="n">addr</span><span class="p">))</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+      <span class="k">else</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">pio_i2c_read_blocking</span><span class="p">(</span><span class="n">pio</span><span class="p">,</span> <span class="n">sm</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+      <span class="n">printf</span><span class="p">(</span><span class="n">result</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="s">"."</span> <span class="o">:</span> <span class="s">"@"</span><span class="p">);</span>
+      <span class="n">printf</span><span class="p">(</span><span class="n">addr</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">15</span> <span class="o">?</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span> <span class="o">:</span> <span class="s">"  "</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+      
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/pico-pio-i2c-prototype.png"><img
+            src="/assets/images/tutorials/pico-pio-i2c-prototype.png" alt="PIO I2C Bus Scan with Pico prototype"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/pico-pio-i2c-schematic.png"><img
+            src="/assets/images/tutorials/pico-pio-i2c-schematic.png" alt="PIO I2C Bus Scan with Pico schematic"></a>
+      </div>
+      
+
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/pico-pio-i2c-console.png"><img
+            src="/assets/images/tutorials/pico-pio-i2c-console.png" alt="PIO I2C Bus Scan with Pico serial console"></a>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>This example code does an I2C Bus Scan for the sensors <code class="language-plaintext highlighter-rouge">Si7021</code> and <code class="language-plaintext highlighter-rouge">VCNL4000</code> with PIO.</p>
+
+<p>The datasheets of the 2 sensors below show that the serial monitor prints are in line with the information in the datasheet.</p>
+
+<p>The I2C address for <code class="language-plaintext highlighter-rouge">Si7021</code> is <code class="language-plaintext highlighter-rouge">0x40</code>.
+<img src="http://localhost:4000/assets/images/tutorials/pico-i2c-datasheet-si7021.png" alt="" /></p>
+
+<p>The I2C address for <code class="language-plaintext highlighter-rouge">VCNL4000</code> is <code class="language-plaintext highlighter-rouge">0x13</code>.
+<img src="http://localhost:4000/assets/images/tutorials/pico-i2c-datasheet-VCNL4000.png" alt="" /></p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c">PIO Pico I2C Bus Scan example code</a></li>
+        
+        <li id="footnote-2"><a href="https://learn.adafruit.com/adafruit-si7021-temperature-plus-humidity-sensor">Adafruit Si7021 Temperature / Humidity sensor Dev Board</a></li>
+        
+        <li id="footnote-3"><a href="https://www.silabs.com/documents/public/data-sheets/Si7021-A20.pdf">Si70721 Temperature / Humidity datasheet</a></li>
+        
+        <li id="footnote-4"><a href="https://www.adafruit.com/product/466">Adafruit VCNL4000 proximity sensor dev board</a></li>
+        
+        <li id="footnote-5"><a href="https://cdn.sparkfun.com/datasheets/BreakoutBoards/vcnl4000.pdf">VCNL4000 datasheet</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

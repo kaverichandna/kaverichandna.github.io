@@ -1,0 +1,7 @@
+I"c<p>Display IMU data with Arduino board Nano 33 BLE Sense with IMU <code class="language-plaintext highlighter-rouge">LSM9DS1</code>.</p>
+
+<p>Install the dependancy:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arduino-cli lib <span class="nb">install </span>Arduino_LSM9DS1
+</code></pre></div></div>
+:ET

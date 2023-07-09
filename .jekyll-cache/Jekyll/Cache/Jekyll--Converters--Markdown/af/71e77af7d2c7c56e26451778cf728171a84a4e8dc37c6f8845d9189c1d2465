@@ -1,0 +1,4 @@
+I"Ò<p>Do something periodically on wake up after deep sleep or by pressing the button on-board.</p>
+
+<p>On WeMos board , the pin <code class="language-plaintext highlighter-rouge">REST</code> to <code class="language-plaintext highlighter-rouge">10kâ„¦</code> pulled up to <code class="language-plaintext highlighter-rouge">+3V3</code> is already there. Remember to include it back with the <code class="language-plaintext highlighter-rouge">ESP8266</code> module.</p>
+:ET

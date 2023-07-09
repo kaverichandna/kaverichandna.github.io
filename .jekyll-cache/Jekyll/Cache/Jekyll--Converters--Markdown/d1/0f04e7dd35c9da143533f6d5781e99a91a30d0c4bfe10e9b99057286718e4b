@@ -1,0 +1,80 @@
+I"1<h3 id="install-dependancies">Install dependancies</h3>
+
+<ol>
+  <li><a href="https://github.com/esp-rs/rust-build#installation-commands">Install for Xtensa</a>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/esp-rs/rust-build.git
+ cd rust-build
+ ./install-rust-toolchain.sh
+ . export-esp.sh
+</code></pre></div>    </div>
+  </li>
+  <li>Set <code class="language-plaintext highlighter-rouge">$PATH</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> export LIBCLANG_PATH="~/.espressif/tools/xtensa-esp32-elf-clang/esp-14.0.0-20220415-x86_64-apple-darwin/lib/"
+ export PATH="~/.espressif/tools/xtensa-esp32-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:~/.espressif/tools/xtensa-esp32s2-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:~/.espressif/tools/xtensa-esp32s3-elf-gcc/8_4_0-esp-2021r2-patch3-x86_64-apple-darwin/bin/:$PATH"
+</code></pre></div>    </div>
+  </li>
+  <li>Install Cargo <a href="https://github.com/esp-rs/esp-idf-template#install-cargo-sub-commands">sub-commands</a>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cargo install cargo-generate
+ cargo install ldproxy
+ cargo install espflash
+ cargo install espmonitor
+</code></pre></div>    </div>
+  </li>
+  <li><a href="https://github.com/esp-rs/esp-idf-template#generate-the-project">Generate the project</a>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>cargo generate <span class="nt">--vcs</span> none <span class="nt">--git</span> https://github.com/esp-rs/esp-idf-template cargo
+
+ 🤷   Project Name : hello
+ 🔧   Destination: /Users/sayanee/Desktop/hello ...
+ 🔧   Generating template ...
+ ✔ 🤷   STD support · <span class="nb">true</span>
+ ✔ 🤷   ESP-IDF native build version <span class="o">(</span>v4.3.2 <span class="o">=</span> previous stable, v4.4 <span class="o">=</span> stable, mainline <span class="o">=</span> UNSTABLE<span class="o">)</span> · v4.4
+ ? 🤷   Configure project to use Dev Containers <span class="o">(</span>VS Code, GitHub Codespaces and Gitpod<span class="o">)</span>? <span class="o">(</span>beware: Dev Cont
+ ✔ 🤷   Configure project to use Dev Containers <span class="o">(</span>VS Code, GitHub Codespaces and Gitpod<span class="o">)</span>? <span class="o">(</span>beware: Dev Containers not available <span class="k">for </span>esp-idf v4.3.2<span class="o">)</span> · <span class="nb">false</span>
+ ✔ 🤷   MCU · esp32s3
+ <span class="o">[</span> 1/10]   Done: .cargo/config.toml
+ <span class="o">[</span> 2/10]   Done: .cargo
+ <span class="o">[</span> 3/10]   Done: .gitignore
+ <span class="o">[</span> 4/10]   Done: .vscode
+ <span class="o">[</span> 5/10]   Done: Cargo.toml
+ <span class="o">[</span> 6/10]   Done: build.rs
+ <span class="o">[</span> 7/10]   Done: rust-toolchain.toml
+ <span class="o">[</span> 8/10]   Done: sdkconfig.defaults
+ <span class="o">[</span> 9/10]   Done: src/main.rs
+ <span class="o">[</span>10/10]   Done: src
+ 🔧   Moving generated files into: <span class="sb">`</span>/Users/sayanee/Desktop/hello<span class="sb">`</span>...
+ ✨   Done! New project created /Users/sayanee/Desktop/hello
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="compile">Compile</h3>
+
+<ol>
+  <li>Change directory into the project name
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">cd </span>hello
+</code></pre></div>    </div>
+  </li>
+  <li>Edit file <code class="language-plaintext highlighter-rouge">src/main.rs</code> with the blinky code</li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">Cargo.toml</code> to add dependancies</li>
+  <li><a href="https://github.com/esp-rs/esp-idf-template#build">Compile / build</a> the project
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">$ </span>cargo build
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="upload-the-firmware">Upload the firmware</h2>
+
+<ol>
+  <li>Plug in the board into the USB port (not the UART port).</li>
+  <li><a href="https://github.com/esp-rs/esp-idf-template#flash">Upload / Flash</a>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  espflash /dev/cu.usbmodem14101 target/xtensa-esp32s3-espidf/debug/hello
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="view-the-logs">View the logs</h2>
+
+<p>Start the <a href="https://github.com/esp-rs/esp-idf-template#monitor">serial monitor</a></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  espmonitor /dev/cu.usbmodem14101
+</code></pre></div></div>
+:ET

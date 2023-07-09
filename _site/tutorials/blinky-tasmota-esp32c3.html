@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Blinky with Tasmota on ESP32-C3</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/blinky-tasmota-esp32c3" />
+  <meta name="description" content="Blinky with Tasmota on ESP32-C3">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/blinky-tasmota-esp32c3"/>
+  <meta property="og:title" content="Blinky with Tasmota on ESP32-C3"/>
+  <meta property="og:description" content="Blinky with Tasmota on ESP32-C3"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/blinky-gpio3-esp32c3-prototype.jpg" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/blinky-tasmota-esp32c3.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Blinky with Tasmota on ESP32-C3</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">ESP32-C3-DevKitM-1</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">ESP32-C3-MINI-1-N4</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">tasmota</span>
+          
+          <span class="tag is-light">esp32c3</span>
+          
+          <span class="tag is-light">toggle</span>
+          
+          <span class="tag is-light">led</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/espressif/esptool">Esptool</a></li>
+                
+                <li><a href="http://ota.tasmota.com/tasmota32/release/">Tasmota binaries</a></li>
+                
+                <li><a href="">Tasmota web installer</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://www.aliexpress.com/item/1005003989099547.html">ESP32-C3-DevKitM-1</a></li>
+                
+                <li><a href="https://s.click.aliexpress.com/e/_AUols3">(Optional) Power supply unit</a></li>
+                
+                <li><a href="https://s.click.aliexpress.com/e/_DmRto71">(Optional) USB Female to 4MM Banana Plug Test Lead</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/blinky-gpio3-esp32c3-prototype.jpg"><img
+            src="/assets/images/tutorials/blinky-gpio3-esp32c3-prototype.jpg" alt="Blinky with Tasmota on ESP32-C3 prototype"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/blinky-gpio3-esp32c3-schematic.png"><img
+            src="/assets/images/tutorials/blinky-gpio3-esp32c3-schematic.png" alt="Blinky with Tasmota on ESP32-C3 schematic"></a>
+      </div>
+      
+
+      
+
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <h3 id="upload-firmware-with-tasmota-web-installer">Upload firmware with Tasmota web installer</h3>
+
+<ol>
+  <li>
+    <p>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port of the board and check the port</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.MINIJAMBOXbyJawbone  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+</code></pre></div>    </div>
+  </li>
+  <li>Visit the <a href="https://tasmota.github.io/install/">Tasmota web installer</a> on the browser
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-1.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-1.png" alt="" /></a></li>
+  <li>Choose <code class="language-plaintext highlighter-rouge">ESP32-C3</code> in the dropdown list</li>
+  <li>
+    <p>Connect to the port e.g. <code class="language-plaintext highlighter-rouge">/dev/cu.SLAB_USBtoUART</code>
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-2.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-2.png" alt="" /></a></p>
+  </li>
+  <li>
+    <p>Install Tasmota
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-3.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-3.png" alt="" /></a></p>
+
+    <p><a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-4.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-4.png" alt="" /></a></p>
+
+    <p><a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-5.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-5.png" alt="" /></a></p>
+
+    <p><a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-6.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-step-6.png" alt="" /></a></p>
+  </li>
+</ol>
+
+<h3 id="connect-to-wifi-using-the-tasmota-web-installer">Connect to WiFi using the Tasmota web installer</h3>
+
+<ol>
+  <li>
+    <p>Ensure automatic configure wifi dialogue is seen</p>
+
+    <p><a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-wifi-step-1.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-wifi-step-1.png" alt="" /></a></p>
+  </li>
+  <li>
+    <p>Connect to the WiFi with SSID and password</p>
+
+    <p><a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-wifi-step-2.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-wifi-step-2.png" alt="" /></a></p>
+  </li>
+  <li>
+    <p>Visit the device URL at <code class="language-plaintext highlighter-rouge">10.0.3.10</code></p>
+
+    <p><a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-wifi-step-3.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-wifi-step-3.png" alt="" /></a></p>
+  </li>
+</ol>
+
+<h3 id="control-led-via-the-web">Control LED via the web</h3>
+
+<ol>
+  <li>Wire up a simple LED to <code class="language-plaintext highlighter-rouge">GPIO3</code>
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-gpio3-esp32c3-schematic.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-gpio3-esp32c3-schematic.png" alt="" /></a></li>
+  <li>Plug in the board to an external power supply.</li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Configuration</code>
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-config.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-config.png" alt="" /></a></li>
+  <li>Click <code class="language-plaintext highlighter-rouge">Configure Module</code>
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-config-module.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-config-module.png" alt="" /></a></li>
+  <li>Change <code class="language-plaintext highlighter-rouge">GPIO3</code> to <code class="language-plaintext highlighter-rouge">Relay</code> number 1 and save configuration
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-relay.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-relay.png" alt="" /></a></li>
+  <li>Go back to the main menu after device restart
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-main.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-main.png" alt="" /></a></li>
+  <li>Click the toggle <code class="language-plaintext highlighter-rouge">ON</code> and <code class="language-plaintext highlighter-rouge">OFF</code> to control the LED
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-toggle.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-tasmota-esp32c3-toggle.png" alt="" /></a></li>
+</ol>
+
+<h3 id="rollback-from-tasmota-to-arduino">Rollback from Tasmota to Arduino</h3>
+
+<ol>
+  <li>Follow the <a href="./rollback-esp32c3">rollback steps</a> to erase the flash.</li>
+  <li><a href="./blinky-esp-idf-esp32c3">Flash in blinky with ESP-IDF</a>.</li>
+  <li><a href="./blinky-arduino-esp32c3">Flash in blinky with Arduino</a>.</li>
+</ol>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://dl.espressif.com/dl/schematics/SCH_ESP32-C3-DEVKITM-1_V1_20200915A.pdf">Schematic of ESP32-C3-DevKitM-1</a></li>
+        
+        <li id="footnote-2"><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html#pin-layout">Pinouts</a></li>
+        
+        <li id="footnote-3"><a href="https://tasmota.github.io/docs/Getting-Started/">Tasmota getting started</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

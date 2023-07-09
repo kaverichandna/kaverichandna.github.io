@@ -1,0 +1,20 @@
+I"�<p>Learn how to split long files into several header and cpp files for better code organization. The final directory structure will look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ tree
+.
+├── Imu.cpp
+├── Imu.h
+├── Makefile
+├── Sensor.cpp
+├── Sensor.h
+└── nano33-ble-sense-imu-sensors.ino
+
+0 directories, 6 files
+</code></pre></div></div>
+
+<p>Install the dependancies:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arduino-cli lib <span class="nb">install </span>Arduino_LSM9DS1
+arduino-cli lib <span class="nb">install </span>Arduino_HTS221
+</code></pre></div></div>
+:ET

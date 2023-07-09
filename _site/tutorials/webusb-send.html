@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Web USB send to browser</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/webusb-send" />
+  <meta name="description" content="Web USB send to browser">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/webusb-send"/>
+  <meta property="og:title" content="Web USB send to browser"/>
+  <meta property="og:description" content="Web USB send to browser"/>
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/webusb-send.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Web USB send to browser</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">RobotDyn M0 mini</span>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">Arduino</span>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">SAMD21</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">WebUSB</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/webusb/arduino#compatible-hardware">WebUSB Compatible Arduino hardware</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                
+                <li><a href="./webusb-detect">Web USB detect</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For Arduino INO file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/webusb-send" class="button is-primary">Download code</a>
+      <code class="is-size-4">webusb-send.ino</code>
+      
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;WebUSB.h&gt;</span><span class="cp">
+</span>
+<span class="c1">// Modified from example https://webusb.github.io/arduino/demos/console</span>
+<span class="n">WebUSB</span> <span class="nf">WebUSBSerial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">"webusb.github.io/arduino/demos/console"</span><span class="p">);</span>
+<span class="kt">uint16_t</span> <span class="n">irCode</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3446</span><span class="p">,</span> <span class="mi">1716</span><span class="p">,</span> <span class="mi">416</span><span class="p">,</span> <span class="mi">1310</span><span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">WebUSBSerial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">WebUSBSerial</span><span class="p">)</span> <span class="p">{}</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">WebUSBSerial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"Hello world to the browser!"</span><span class="p">);</span>
+  <span class="n">WebUSBSerial</span><span class="p">.</span><span class="n">flush</span><span class="p">();</span>
+
+  <span class="n">writeWebUSB</span><span class="p">((</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">irCode</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
+
+  <span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">writeWebUSB</span><span class="p">(</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">WebUSBSerial</span><span class="p">.</span><span class="n">write</span><span class="p">((</span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">buffer</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+    <span class="n">WebUSBSerial</span><span class="p">.</span><span class="n">flush</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+
+      <h2 class="title is-2">Makefile</h2>
+      
+<figure class="highlight"><pre><code class="language-make" data-lang="make"><span class="nv">BOARD</span><span class="o">?=</span>arduino:samd:arduino_zero_native
+<span class="nv">PORT</span> <span class="o">:=</span> <span class="nf">$(</span><span class="nb">shell</span> <span class="nb">ls</span> /dev/cu.usbmodem<span class="k">*</span><span class="nf">)</span>
+
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">default lint all flash clean</span>
+
+<span class="nl">default</span><span class="o">:</span> <span class="nf">lint all flash clean</span>
+
+<span class="nl">lint</span><span class="o">:</span>
+	cpplint <span class="nt">--extensions</span><span class="o">=</span>ino <span class="nt">--filter</span><span class="o">=</span><span class="nt">-legal</span>/copyright,-whitespace/line_length,-readability/casting,-readability/todo <span class="k">*</span>.ino
+
+<span class="nl">all</span><span class="o">:</span>
+	<span class="c"># This custom PCB does not have a crytal on pins PA00 and PA01</span>
+	<span class="c"># Hence, use -DCRYSTALLESS to replace the extra_flags in boards.txt</span>
+	arduino-cli compile <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> <span class="nt">--build-properties</span> build.extra_flags<span class="o">=</span><span class="s2">"-DCRYSTALLESS -D__SAMD21G18A__ {build.usb_flags}"</span> ./
+
+<span class="nl">flash</span><span class="o">:</span>
+	arduino-cli upload <span class="nt">-p</span> <span class="nv">$(PORT)</span> <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span>
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-r</span> build
+
+<span class="nl">server</span><span class="o">:</span>
+	<span class="nb">echo</span> <span class="s2">"Open Chrome browser at http://localhost:8000/webusb-send.html"</span>
+	python <span class="nt">-m</span> SimpleHTTPServer 8000</code></pre></figure>
+
+    
+  </div>
+</section>
+
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>Send a simple sentence from the MCU to the browser on laptop.</p>
+
+<p>Start the web browser code with <code class="language-plaintext highlighter-rouge">make server</code>.</p>
+
+<p>Ensure the browser side of the code is also implemented with <code class="language-plaintext highlighter-rouge">serial.js</code>.</p>
+
+<p><a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/webusb-send" class="button is-primary">Download code</a></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"connect"</span><span class="nt">&gt;</span>Connect to device<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;p&gt;</span>Open the browser console to see received messages from the MCU!<span class="nt">&lt;/p&gt;</span>
+
+<span class="c">&lt;!-- serial.js
+From https://github.com/webusb/arduino/blob/gh-pages/demos/serial.js
+Add 'vendorId': 0x2341 and 0x2a03 in line 27 and line 28
+--&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"serial.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">serial</span><span class="p">.</span><span class="nx">requestPort</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">filters</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="dl">'</span><span class="s1">vendorId</span><span class="dl">'</span><span class="p">:</span> <span class="mh">0x2341</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="dl">'</span><span class="s1">vendorId</span><span class="dl">'</span><span class="p">:</span> <span class="mh">0x2a03</span> <span class="p">}</span>
+  <span class="p">];</span>
+  <span class="k">return</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">usb</span><span class="p">.</span><span class="nx">requestDevice</span><span class="p">({</span> <span class="dl">'</span><span class="s1">filters</span><span class="dl">'</span><span class="p">:</span> <span class="nx">filters</span> <span class="p">}).</span><span class="nx">then</span><span class="p">(</span>
+    <span class="nx">device</span> <span class="o">=&gt;</span> <span class="k">new</span> <span class="nx">serial</span><span class="p">.</span><span class="nx">Port</span><span class="p">(</span><span class="nx">device</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">port</span>
+<span class="kd">let</span> <span class="nx">connectButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#connect</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nx">textDecoder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TextDecoder</span><span class="p">()</span>
+
+<span class="nx">connectButton</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">port</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// If port is already connected, disconnect it</span>
+    <span class="nx">connectButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Connect</span><span class="dl">'</span>
+    <span class="nx">port</span><span class="p">.</span><span class="nx">disconnect</span><span class="p">()</span>
+    <span class="nx">port</span> <span class="o">=</span> <span class="kc">null</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Device is disconnected.</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// If there is no port, then connect to a new port</span>
+    <span class="nx">serial</span><span class="p">.</span><span class="nx">requestPort</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="nx">selectedPort</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">port</span> <span class="o">=</span> <span class="nx">selectedPort</span>
+      <span class="nx">port</span><span class="p">.</span><span class="nx">connect</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Device is connected to Product ID: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">port</span><span class="p">.</span><span class="nx">device_</span><span class="p">.</span><span class="nx">productId</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> and Vendor ID: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">port</span><span class="p">.</span><span class="nx">device_</span><span class="p">.</span><span class="nx">vendorId</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+
+        <span class="nx">connectButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Disconnect</span><span class="dl">'</span>
+        <span class="nx">port</span><span class="p">.</span><span class="nx">onReceive</span> <span class="o">=</span> <span class="nx">data</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">textDecoder</span><span class="p">.</span><span class="nx">decode</span><span class="p">(</span><span class="nx">data</span><span class="p">))}</span>
+        <span class="nx">port</span><span class="p">.</span><span class="nx">onReceiveError</span> <span class="o">=</span> <span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Receive error: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)}</span>
+      <span class="p">},</span> <span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Connection error: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span> <span class="p">})</span>
+    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Connection error: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span> <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web">Access USB Devices on the Web</a></li>
+        
+        <li id="footnote-2"><a href="http://www.linux-usb.org/usb.ids">List of USB IDs</a></li>
+        
+        <li id="footnote-3"><a href="https://github.com/webusb/arduino#compatible-hardware">List of compatible arduino hardware</a></li>
+        
+        <li id="footnote-4"><a href="https://webusb.github.io/arduino/demos/console/">Web USB demo</a></li>
+        
+        <li id="footnote-5"><a href="https://github.com/webusb/arduino/blob/gh-pages/demos/serial.js">Web USB serial.js</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Watch</h2>
+    <div class="video-container">
+      <iframe class="v" src="https://www.youtube-nocookie.com/embed/xV1l5SdE8sk" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

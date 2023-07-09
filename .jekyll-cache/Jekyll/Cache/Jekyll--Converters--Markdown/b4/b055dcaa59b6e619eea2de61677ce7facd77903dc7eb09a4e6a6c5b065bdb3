@@ -1,0 +1,10 @@
+I"³<p>This example contains feature detection code in JavaScript. Load the HTML file file via a server on different browsers to see whether geolocation, Web BLE and Web USB are supported.</p>
+
+<h2 id="chrome">Chrome</h2>
+
+<p>![]http://localhost:4000/assets/images/tutorials/web-hw-feature-detection-chrome.png)</p>
+
+<h2 id="safari">Safari</h2>
+
+<p>![]http://localhost:4000/assets/images/tutorials/web-hw-feature-detection-safari.png)</p>
+:ET

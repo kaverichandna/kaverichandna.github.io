@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Web BLE detect</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/web-ble-detect" />
+  <meta name="description" content="Web BLE detect">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/web-ble-detect"/>
+  <meta property="og:title" content="Web BLE detect"/>
+  <meta property="og:description" content="Web BLE detect"/>
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/web-ble-detect.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Web BLE detect</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">Adafruit Feather Bluefruit</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">nRF52</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">BLE</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/adafruit/Adafruit_nRF52_Arduino">Adafruit nRF52 Arduino</a></li>
+                
+                <li><a href="https://github.com/adafruit/Adafruit_nRF52_nrfutil">Adafruit nRF52 nrfutil</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://caniuse.com/#feat=web-bluetooth">Can I Use Web BLE?</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://amzn.to/3ndsBlF">Adafruit Feather Bluefruit</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For Arduino INO file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/web-ble-detect" class="button is-primary">Download code</a>
+      <code class="is-size-4">web-ble-detect.ino</code>
+      
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;bluefruit.h&gt;</span><span class="cp">
+</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Start!"</span><span class="p">);</span>
+
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">"Palm"</span><span class="p">);</span>
+
+  <span class="n">startAdv</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">startAdv</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">addFlags</span><span class="p">(</span><span class="n">BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE</span><span class="p">);</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">addTxPower</span><span class="p">();</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">addName</span><span class="p">();</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">restartOnDisconnect</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">setInterval</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">244</span><span class="p">);</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">setFastTimeout</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
+  <span class="n">Bluefruit</span><span class="p">.</span><span class="n">Advertising</span><span class="p">.</span><span class="n">start</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+
+      <h2 class="title is-2">Makefile</h2>
+      
+<figure class="highlight"><pre><code class="language-make" data-lang="make"><span class="nv">BOARD</span><span class="o">?=</span>adafruit:nrf52:feather52832
+<span class="nv">PORT</span><span class="o">?=</span>/dev/tty.SLAB_USBtoUART
+
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">default lint all flash clean</span>
+
+<span class="nl">default</span><span class="o">:</span> <span class="nf">lint all flash clean</span>
+
+<span class="nl">lint</span><span class="o">:</span>
+	cpplint <span class="nt">--extensions</span><span class="o">=</span>ino <span class="nt">--filter</span><span class="o">=</span><span class="nt">-legal</span>/copyright <span class="k">*</span>.ino
+
+<span class="nl">all</span><span class="o">:</span>
+	arduino-cli compile <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> ./
+
+<span class="nl">flash</span><span class="o">:</span>
+	adafruit-nrfutil dfu genpkg <span class="nt">--dev-type</span> 0x0052 <span class="nt">--application</span> ./.<span class="k">*</span>.hex dfu-package.zip
+	adafruit-nrfutil dfu serial <span class="nt">--package</span> dfu-package.zip <span class="nt">-p</span> <span class="nv">$(PORT)</span> <span class="nt">-b</span> 115200
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-f</span> .<span class="k">*</span>.elf
+	<span class="nb">rm</span> <span class="nt">-f</span> .<span class="k">*</span>.hex
+	<span class="nb">rm</span> <span class="nt">-f</span> <span class="k">*</span>.zip
+
+<span class="nl">serve</span><span class="o">:</span>
+	<span class="nb">echo</span> <span class="s2">"Open Chrome browser at http://localhost:8000/web-ble-detect.html"</span>
+	python <span class="nt">-m</span> SimpleHTTPServer 8000</code></pre></figure>
+
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+
+      
+
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/web-ble-detect-console.png"><img
+            src="/assets/images/tutorials/web-ble-detect-console.png" alt="Web BLE detect serial console"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Browser console</h2>
+        <p class="subtitle is-4">Open the browser developer console.</p>
+        <a href="/assets/images/tutorials/web-ble-detect-browser.png"><img
+            src="/assets/images/tutorials/web-ble-detect-browser.png" alt="Web BLE detect browser"></a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>Connect to a BLE device with a given device name and display some device info in the Chrome browser console.</p>
+
+<p>Ensure the browser side of the code is also implemented with <code class="language-plaintext highlighter-rouge">web-ble-detect.html</code>.</p>
+
+<p><a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/web-ble-detect" class="button is-primary">Download code</a> <a href="http://localhost:4000/web-ble-detect" class="button is-primary">View demo</a></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+  <span class="nt">&lt;button&gt;</span>Connect with BLE device<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+  <span class="kd">var</span> <span class="nx">deviceName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Palm</span><span class="dl">'</span>
+
+  <span class="kd">function</span> <span class="nx">isWebBluetoothEnabled</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">bluetooth</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Web Bluetooth API is not available in this browser!</span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getDeviceInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="c1">// acceptAllDevices: true // Option to accept all devices</span>
+      <span class="dl">"</span><span class="s2">filters</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="nx">deviceName</span> <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Requesting Bluetooth Device...</span><span class="dl">'</span><span class="p">)</span>
+    <span class="nb">navigator</span><span class="p">.</span><span class="nx">bluetooth</span><span class="p">.</span><span class="nx">requestDevice</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">device</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">&gt; Name: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">device</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Argh! </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">form</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">submit</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">()</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isWebBluetoothEnabled</span><span class="p">())</span> <span class="p">{</span>
+      <span class="nx">getDeviceInfo</span><span class="p">()</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://googlechrome.github.io/samples/web-bluetooth/device-info.html">Chrome Web Bluetooth / Device Info Sample</a></li>
+        
+        <li id="footnote-2"><a href="https://webbluetoothcg.github.io/web-bluetooth">Web Bluetooth Specs</a></li>
+        
+        <li id="footnote-3"><a href="https://caniuse.com/#feat=mdn-api_bluetooth">Can I Use browser compatibility</a></li>
+        
+        <li id="footnote-4"><a href="https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web">Google Chrome developers BLE</a></li>
+        
+        <li id="footnote-5"><a href="https://googlechrome.github.io/samples/web-bluetooth/index.html">Chrome Web Bluetooth samples</a></li>
+        
+        <li id="footnote-6"><a href="https://www.adafruit.com/product/3406">Adafruit nRF52 board</a></li>
+        
+        <li id="footnote-7"><a href="https://github.com/adafruit/Adafruit_nRF52_Arduino">Adafruit nRF52 Arduino library</a></li>
+        
+        <li id="footnote-8"><a href="https://github.com/adafruit/Adafruit_nRF52_Arduino/tree/master/libraries/Bluefruit52Lib/examples">Adafruit nRF52 Arduino library samples</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

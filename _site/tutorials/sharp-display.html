@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Sharp display</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/sharp-display" />
+  <meta name="description" content="Sharp display">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/sharp-display"/>
+  <meta property="og:title" content="Sharp display"/>
+  <meta property="og:description" content="Sharp display"/>
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/sharp-display.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Sharp display</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">Adafruit Feather Bluefruit</span>
+        </div>
+      </div>
+      
+
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">nRF52</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">sharp</span>
+          
+          <span class="tag is-light">display</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/adafruit/Adafruit_nRF52_Arduino">Adafruit nRF52 Arduino</a></li>
+                
+                <li><a href="https://github.com/adafruit/Adafruit_nRF52_nrfutil">Adafruit nRF52 nrfutil</a></li>
+                
+                <li><a href="https://github.com/adafruit/Adafruit_SHARP_Memory_Display">Adafruit SHARP memory display firmware</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                
+                <li><a href="./blinky-nrf52">Blinky nRF52</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://amzn.to/3ndsBlF">Adafruit Feather Bluefruit</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For Arduino INO file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/sharp-display" class="button is-primary">Download code</a>
+      <code class="is-size-4">sharp-display.ino</code>
+      
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;Adafruit_GFX.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;Adafruit_SharpMem.h&gt;</span><span class="cp">
+</span>
+<span class="c1">// pins of Adafruit nRF52 Monochrome SHARP display 168x144 pixels</span>
+<span class="cp">#define SHARP_SCK  12
+#define SHARP_MOSI 13
+#define SHARP_SS   7
+</span>
+<span class="n">Adafruit_SharpMem</span> <span class="nf">display</span><span class="p">(</span><span class="n">SHARP_SCK</span><span class="p">,</span> <span class="n">SHARP_MOSI</span><span class="p">,</span> <span class="n">SHARP_SS</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">168</span><span class="p">);</span>
+
+<span class="cp">#define BLACK 0
+#define WHITE 1
+</span>
+<span class="kt">int</span> <span class="n">minorHalfSize</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Hello!"</span><span class="p">);</span>
+
+  <span class="n">display</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+  <span class="n">minorHalfSize</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">(),</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">())</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+
+  <span class="n">display</span><span class="p">.</span><span class="n">drawPixel</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testdrawline</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testdrawrect</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testfillrect</span><span class="p">();</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">display</span><span class="p">.</span><span class="n">fillCircle</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testdrawroundrect</span><span class="p">();</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testfillroundrect</span><span class="p">();</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testdrawtriangle</span><span class="p">();</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+ <span class="n">testfilltriangle</span><span class="p">();</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+ <span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+ <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+  <span class="n">testdrawchar</span><span class="p">();</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">setRotation</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+
+    <span class="n">display</span><span class="p">.</span><span class="n">setTextSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Hello, world!"</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">WHITE</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="mi">3</span><span class="p">.</span><span class="mi">141592</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">setTextSize</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"0x"</span><span class="p">);</span> <span class="n">display</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="mh">0xDEADBEEF</span><span class="p">,</span> <span class="n">HEX</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+      <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span> <span class="c1">// 1/2 sec delay</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testdrawline</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+
+  <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">-=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+
+  <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">-=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">-=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+
+  <span class="n">display</span><span class="p">.</span><span class="n">clearDisplay</span><span class="p">();</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">();</span> <span class="n">i</span><span class="o">+=</span><span class="mi">4</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawLine</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">250</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testdrawrect</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">minorHalfSize</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawRect</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testfillrect</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">uint8_t</span> <span class="n">color</span> <span class="o">=</span> <span class="n">BLACK</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">minorHalfSize</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">3</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="n">display</span><span class="p">.</span><span class="n">fillRect</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+    <span class="n">color</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testdrawroundrect</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">minorHalfSize</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawRoundRect</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">minorHalfSize</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testfillroundrect</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">uint8_t</span> <span class="n">color</span> <span class="o">=</span> <span class="n">BLACK</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">minorHalfSize</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">fillRoundRect</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">,</span> <span class="n">minorHalfSize</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+    <span class="n">color</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testdrawtriangle</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">minorHalfSize</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">drawTriangle</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="p">,</span>
+                     <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">i</span><span class="p">,</span>
+                     <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testfilltriangle</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">uint8_t</span> <span class="n">color</span> <span class="o">=</span> <span class="n">BLACK</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">minorHalfSize</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">-=</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">fillTriangle</span><span class="p">(</span><span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span>  <span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="p">,</span>
+                         <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">i</span><span class="p">,</span>
+                         <span class="n">display</span><span class="p">.</span><span class="n">width</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">display</span><span class="p">.</span><span class="n">height</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">color</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+    <span class="n">color</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">testdrawchar</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">setTextSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">setTextColor</span><span class="p">(</span><span class="n">BLACK</span><span class="p">);</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">cp437</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">256</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="sc">'\n'</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+    <span class="n">display</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">display</span><span class="p">.</span><span class="n">refresh</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+
+      <h2 class="title is-2">Makefile</h2>
+      
+<figure class="highlight"><pre><code class="language-make" data-lang="make"><span class="nv">BOARD</span><span class="o">?=</span>adafruit:nrf52:feather52832
+<span class="nv">PORT</span><span class="o">?=</span>/dev/tty.SLAB_USBtoUART
+<span class="nv">BUILD</span><span class="o">=</span>build
+<span class="c"># Arduino CLI version 0.14.0 is used.
+</span>
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">default lint all flash clean</span>
+
+<span class="nl">default</span><span class="o">:</span> <span class="nf">lint all flash clean</span>
+
+<span class="nl">lint</span><span class="o">:</span>
+	cpplint <span class="nt">--extensions</span><span class="o">=</span>ino <span class="nt">--filter</span><span class="o">=</span><span class="nt">-legal</span>/copyright <span class="k">*</span>.ino
+
+<span class="nl">all</span><span class="o">:</span>
+	arduino-cli compile <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> <span class="nt">--output-dir</span> <span class="nv">$(BUILD)</span> ./
+
+<span class="nl">flash</span><span class="o">:</span>
+	adafruit-nrfutil dfu genpkg <span class="nt">--dev-type</span> 0x0052 <span class="nt">--application</span> <span class="nv">$(BUILD)</span>/<span class="k">*</span>.hex dfu-package.zip
+	adafruit-nrfutil dfu serial <span class="nt">--package</span> dfu-package.zip <span class="nt">-p</span> <span class="nv">$(PORT)</span> <span class="nt">-b</span> 115200
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-rf</span> build
+	<span class="nb">rm </span>dfu-package.zip</code></pre></figure>
+
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/sharp-display-schematic.png"><img
+            src="/assets/images/tutorials/sharp-display-schematic.png" alt="Sharp display schematic"></a>
+      </div>
+      
+
+      
+
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>Adafruit Bluefruit nRF52 breakout board and Adafruit SHARP Memory Monochrome Display Breakout 168x144 pixels are used.</p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://github.com/adafruit/Adafruit_SHARP_Memory_Display/blob/master/examples/sharpmemtest/sharpmemtest.ino">Adafruit SHARP memory display firmware</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

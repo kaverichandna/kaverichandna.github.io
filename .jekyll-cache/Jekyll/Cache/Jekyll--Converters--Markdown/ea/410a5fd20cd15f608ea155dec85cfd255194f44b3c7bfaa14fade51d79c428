@@ -1,0 +1,13 @@
+I"<ol>
+  <li>Create new project with PlatformIO on VS Code editor
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-create-project.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-create-project.png" alt="" /></a></li>
+  <li>Edit file <code class="language-plaintext highlighter-rouge">src/main.cpp</code> with blinky Arduino code</li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">platform.ini</code> to other configurations</li>
+  <li>Click Build ✅ to compile the code
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-build.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-build.png" alt="" /></a></li>
+  <li>Click Upload ➡️ to flash the firmware on the board
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-upload.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-upload.png" alt="" /></a></li>
+  <li>Click Serial monitor 🔌 to view the serial prints
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-console.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-platformio-console.png" alt="" /></a></li>
+</ol>
+:ET

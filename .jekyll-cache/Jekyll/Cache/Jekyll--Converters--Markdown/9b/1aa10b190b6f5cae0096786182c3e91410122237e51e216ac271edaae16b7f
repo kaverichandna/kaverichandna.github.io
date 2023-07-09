@@ -1,0 +1,13 @@
+I"a<p>This example shows how to add more files (such as <code class="language-plaintext highlighter-rouge">*.h</code> and <code class="language-plaintext highlighter-rouge">*.cpp</code>) to a current Arduino project without making it into an <a href="https://www.arduino.cc/en/Hacking/libraryTutorial">Arduino library</a>.</p>
+
+<p>Example folder structure:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── Makefile
+├── main.ino
+└── src
+    └── foo
+        ├── foo.cpp
+        └── foo.h
+</code></pre></div></div>
+:ET

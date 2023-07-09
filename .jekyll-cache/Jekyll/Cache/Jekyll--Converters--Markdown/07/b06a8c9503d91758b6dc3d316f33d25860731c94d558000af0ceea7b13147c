@@ -1,0 +1,12 @@
+I";<p>Create a blinky LED with Arduino UNO board with <code class="language-plaintext highlighter-rouge">ATmega328p</code> microcontroller. LED is the on-board <code class="language-plaintext highlighter-rouge">LED_BUILTIN</code>, <code class="language-plaintext highlighter-rouge">GPIO13</code>.</p>
+
+<h3 id="use-with-an-external-power-supply">Use with an external power supply</h3>
+
+<p>As an alternative, external power supply unit can be used with an UART-USB bridge.</p>
+
+<ol>
+  <li>Wireup Arduino UNO with an external power supply and UART-USB bridge to the computer
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-arduino-psu-schematic.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-arduino-psu-schematic.png" alt="" /></a></li>
+  <li>Start the serial monitor on the computer.</li>
+</ol>
+:ET

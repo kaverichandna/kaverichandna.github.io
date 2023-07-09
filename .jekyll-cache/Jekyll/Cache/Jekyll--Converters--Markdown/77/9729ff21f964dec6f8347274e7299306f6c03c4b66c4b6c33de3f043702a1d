@@ -1,0 +1,27 @@
+I"1<p>Use struct data type to declare, create and use it in a function. The struct functions are abstracted in a seperate folder to show how it can be used and referred in the <code class="language-plaintext highlighter-rouge">main.ino</code>.</p>
+
+<p>The struct <code class="language-plaintext highlighter-rouge">LatLong</code> can be declared:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="n">LatLong</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">latitude</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">longitude</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>The struct can be defined:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">LatLong</span> <span class="n">latlong</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">.</span><span class="mi">2480631</span><span class="p">,</span> <span class="mi">103</span><span class="p">.</span><span class="mi">8285657</span><span class="p">};</span>
+</code></pre></div></div>
+
+<p>The struct can be used in a function declaration:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">goToSentosa</span><span class="p">(</span><span class="k">struct</span> <span class="n">LatLong</span> <span class="o">*</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>The struct can be used in a function definition:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">goToSentosa</span><span class="p">(</span><span class="k">struct</span> <span class="n">LatLong</span> <span class="o">*</span><span class="n">ll</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET

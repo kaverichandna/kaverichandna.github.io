@@ -1,0 +1,121 @@
+I"ÇD<p>Connect to a BLE device with BLE GATT Service of <strong>Environmental Sensing</strong> and BLE GATT Characteristic of <strong>UV Index</strong> and read the values from the Chrome browser console when the readings are updated.</p>
+
+<p>Ensure the browser side of the code is also implemented with <code class="language-plaintext highlighter-rouge">web-ble-gatt.html</code>.</p>
+
+<p><a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/web-ble-gatt" class="button is-primary">Download code</a> <a href="http://localhost:4000/web-ble-gatt" class="button is-primary">View demo</a></p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"read"</span><span class="nt">&gt;</span>Connect with BLE device<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"start"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"stop"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Stop<span class="nt">&lt;/button&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+  <span class="kd">var</span> <span class="nx">deviceName</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Palm</span><span class="dl">'</span>
+  <span class="kd">var</span> <span class="nx">bleService</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">environmental_sensing</span><span class="dl">'</span>
+  <span class="kd">var</span> <span class="nx">bleCharacteristic</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">uv_index</span><span class="dl">'</span>
+  <span class="kd">var</span> <span class="nx">bluetoothDeviceDetected</span>
+  <span class="kd">var</span> <span class="nx">gattCharacteristic</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#read</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isWebBluetoothEnabled</span><span class="p">())</span> <span class="p">{</span> <span class="nx">read</span><span class="p">()</span> <span class="p">}</span>
+  <span class="p">})</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#start</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isWebBluetoothEnabled</span><span class="p">())</span> <span class="p">{</span> <span class="nx">start</span><span class="p">()</span> <span class="p">}</span>
+  <span class="p">})</span>
+
+  <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#stop</span><span class="dl">'</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">isWebBluetoothEnabled</span><span class="p">())</span> <span class="p">{</span> <span class="nx">stop</span><span class="p">()</span> <span class="p">}</span>
+  <span class="p">})</span>
+
+  <span class="kd">function</span> <span class="nx">isWebBluetoothEnabled</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">navigator</span><span class="p">.</span><span class="nx">bluetooth</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Web Bluetooth API is not available in this browser!</span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">getDeviceInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="na">optionalServices</span><span class="p">:</span> <span class="p">[</span><span class="nx">bleService</span><span class="p">],</span>
+      <span class="na">filters</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="nx">deviceName</span> <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Requesting any Bluetooth Device...</span><span class="dl">'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">navigator</span><span class="p">.</span><span class="nx">bluetooth</span><span class="p">.</span><span class="nx">requestDevice</span><span class="p">(</span><span class="nx">options</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">device</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">bluetoothDeviceDetected</span> <span class="o">=</span> <span class="nx">device</span>
+    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Argh! </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">read</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nx">bluetoothDeviceDetected</span> <span class="p">?</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">()</span> <span class="p">:</span> <span class="nx">getDeviceInfo</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">connectGATT</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Reading UV Index...</span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">gattCharacteristic</span><span class="p">.</span><span class="nx">readValue</span><span class="p">()</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Waiting to start reading: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">connectGATT</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">bluetoothDeviceDetected</span><span class="p">.</span><span class="nx">gatt</span><span class="p">.</span><span class="nx">connected</span> <span class="o">&amp;&amp;</span> <span class="nx">gattCharacteristic</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nx">bluetoothDeviceDetected</span><span class="p">.</span><span class="nx">gatt</span><span class="p">.</span><span class="nx">connect</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">server</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Getting GATT Service...</span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">server</span><span class="p">.</span><span class="nx">getPrimaryService</span><span class="p">(</span><span class="nx">bleService</span><span class="p">)</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">service</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Getting GATT Characteristic...</span><span class="dl">'</span><span class="p">)</span>
+      <span class="k">return</span> <span class="nx">service</span><span class="p">.</span><span class="nx">getCharacteristic</span><span class="p">(</span><span class="nx">bleCharacteristic</span><span class="p">)</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">characteristic</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">gattCharacteristic</span> <span class="o">=</span> <span class="nx">characteristic</span>
+      <span class="nx">gattCharacteristic</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">characteristicvaluechanged</span><span class="dl">'</span><span class="p">,</span>
+          <span class="nx">handleChangedValue</span><span class="p">)</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#start</span><span class="dl">'</span><span class="p">).</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#stop</span><span class="dl">'</span><span class="p">).</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">handleChangedValue</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">getUint8</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="kd">var</span> <span class="nx">now</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">&gt; </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">:</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">now</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> UV Index is </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">value</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">start</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">gattCharacteristic</span><span class="p">.</span><span class="nx">startNotifications</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Start reading...</span><span class="dl">'</span><span class="p">)</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#start</span><span class="dl">'</span><span class="p">).</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#stop</span><span class="dl">'</span><span class="p">).</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">[ERROR] Start: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">stop</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">gattCharacteristic</span><span class="p">.</span><span class="nx">stopNotifications</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">_</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Stop reading...</span><span class="dl">'</span><span class="p">)</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#start</span><span class="dl">'</span><span class="p">).</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#stop</span><span class="dl">'</span><span class="p">).</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">[ERROR] Stop: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">error</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></figure>
+
+:ET

@@ -1,0 +1,8 @@
+I"~<p>Wire up the hardware according to the schematic. Compile and upload the firmware.</p>
+
+<p>Press the push button to wake up and see the LED Blinking 10 times before going back to sleep again.</p>
+
+<h2 id="troubleshooting-sleep-function">Troubleshooting: Sleep function</h2>
+
+<p>Use function <code class="language-plaintext highlighter-rouge">esp_deep_sleep_enable_gpio_wakeup</code> instead of <code class="language-plaintext highlighter-rouge">esp_sleep_enable_ext0_wakeup</code> or <code class="language-plaintext highlighter-rouge">esp_sleep_enable_ext1_wakeup</code>. <a href="#footnote-5">[5]</a> <a href="#footnote-6">[6]</a></p>
+:ET

@@ -1,0 +1,47 @@
+I"	<h3 id="led">LED</h3>
+
+<p>The default RGB LED on-board which is <code class="language-plaintext highlighter-rouge">GPIO8</code> does on work. So, wire up a simple LED to <code class="language-plaintext highlighter-rouge">GPIO3</code> with a <code class="language-plaintext highlighter-rouge">1k</code> resistor to the ground.</p>
+
+<h3 id="compile-and-upload">Compile and upload</h3>
+
+<ol>
+  <li>
+    <p><a href="https://esphome.io/guides/cli.html#compile-command">Compile</a> firmware for this board</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> esphome compile blinky-esphome-esp32c3.yaml
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port of the board and check the port address</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><a href="https://esphome.io/guides/cli.html#upload-command">Upload</a> the firmware</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> esphome upload <span class="nt">--device</span> /dev/cu.SLAB_USBtoUART blinky-esphome-esp32c3.yaml
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="access-logs">Access logs</h3>
+
+<ol>
+  <li>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port of the board</li>
+  <li>
+    <p>Check the new port address</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access the <a href="https://esphome.io/guides/cli.html#logs-command">logs</a></p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> esphome logs <span class="nt">--device</span> /dev/cu.SLAB_USBtoUART blinky-esphome-esp32c3.yaml
+</code></pre></div>    </div>
+  </li>
+</ol>
+:ET

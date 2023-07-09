@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Neopixel with RaspberryPI Pico</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/pico-neopixel" />
+  <meta name="description" content="Neopixel with RaspberryPI Pico">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/pico-neopixel"/>
+  <meta property="og:title" content="Neopixel with RaspberryPI Pico"/>
+  <meta property="og:description" content="Neopixel with RaspberryPI Pico"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/pico-neopixel-prototype.png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/pico-neopixel.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Neopixel with RaspberryPI Pico</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">RaspberryPI Pico</span>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">C</span>
+        </div>
+      </div>
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">C++</span>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">RP2040</span>
+        </div>
+      </div>
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">WS2812</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">neopixel</span>
+          
+        </div>
+      </div>
+      
+
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf">Pico toolchain</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                
+                <li><a href="./blinky-pico">Blinky with RaspberryPI Pico</a></li>
+                
+                <li><a href="./level-shifter-4channel">Level shifter</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://amzn.to/3sKa5Cv">Raspberry PI Pico</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For C/C++ file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/pico-neopixel" class="button is-primary">Download code</a>
+      <code class="is-size-4">pico-neopixel.c</code>
+      
+        
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span>
+<span class="cp">#include</span> <span class="cpf">"pico/stdlib.h"</span><span class="cp">
+#include</span> <span class="cpf">"hardware/pio.h"</span><span class="cp">
+#include</span> <span class="cpf">"hardware/clocks.h"</span><span class="cp">
+#include</span> <span class="cpf">"ws2812.pio.h"</span><span class="cp">
+</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">PIN_TX</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span> <span class="nf">put_pixel</span><span class="p">(</span><span class="kt">uint32_t</span> <span class="n">pixel_grb</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">pio_sm_put_blocking</span><span class="p">(</span><span class="n">pio0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">pixel_grb</span> <span class="o">&lt;&lt;</span> <span class="mi">8u</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kr">inline</span> <span class="kt">uint32_t</span> <span class="nf">urgb_u32</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">r</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">g</span><span class="p">,</span> <span class="kt">uint8_t</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">((</span><span class="kt">uint32_t</span><span class="p">)(</span><span class="n">r</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span>
+         <span class="p">((</span><span class="kt">uint32_t</span><span class="p">)(</span><span class="n">g</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">|</span>
+         <span class="p">(</span><span class="kt">uint32_t</span><span class="p">)(</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">stdio_init_all</span><span class="p">();</span>
+
+  <span class="n">PIO</span> <span class="n">pio</span> <span class="o">=</span> <span class="n">pio0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">sm</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="n">uint</span> <span class="n">offset</span> <span class="o">=</span> <span class="n">pio_add_program</span><span class="p">(</span><span class="n">pio</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ws2812_program</span><span class="p">);</span>
+  <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">12</span><span class="p">];</span>
+
+  <span class="n">ws2812_program_init</span><span class="p">(</span><span class="n">pio</span><span class="p">,</span> <span class="n">sm</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="n">PIN_TX</span><span class="p">,</span> <span class="mi">800000</span><span class="p">,</span> <span class="nb">true</span><span class="p">);</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">puts</span><span class="p">(</span><span class="s">"Hello RGB and other colors!"</span><span class="p">);</span>
+
+    <span class="c1">// OPTION A: uncomment sleep_ms(500) and view the individual colors</span>
+    <span class="c1">// OPTION B: comment sleep_ms(500) and view the pixels cascading colors</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mh">0xff</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>  <span class="c1">// Red</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>  <span class="c1">// Green</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">));</span>  <span class="c1">// Blue</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mh">0xff</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>  <span class="c1">// Purple</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">));</span>  <span class="c1">// Cyan</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mh">0xff</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">,</span> <span class="mh">0xff</span><span class="p">));</span>  <span class="c1">// White</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+    <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>  <span class="c1">// Black or off</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+    <span class="c1">// Clear all pixels</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">60</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">put_pixel</span><span class="p">(</span><span class="n">urgb_u32</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>  <span class="c1">// Black or off</span>
+    <span class="p">}</span>
+    <span class="n">sleep_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+      
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/pico-neopixel-prototype.png"><img
+            src="/assets/images/tutorials/pico-neopixel-prototype.png" alt="Neopixel with RaspberryPI Pico prototype"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/pico-neopixel-schematic.png"><img
+            src="/assets/images/tutorials/pico-neopixel-schematic.png" alt="Neopixel with RaspberryPI Pico schematic"></a>
+      </div>
+      
+
+      
+
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <p>This code example creates a simple colored blinky with RaspberryPI Pico board with <code class="language-plaintext highlighter-rouge">RP2040</code> microcontroller using the native C/C++ SDK. It shows how the first pixel is lighted with different colors with option A where a delay of <code class="language-plaintext highlighter-rouge">500ms</code> is placed in between lighting each color. With Option B, where <code class="language-plaintext highlighter-rouge">500ms</code> delay is removed, the cascading of pixel is shown.</p>
+
+<h2 id="opion-a-displaying-individual-colors">Opion A: Displaying individual colors</h2>
+
+<p><a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/pico-neopixel/pico-neopixel-option-a.sal" class="button is-primary">Download Saleae Analyser File</a></p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/pico-neopixel-prototype-option-a.png" alt="" /></p>
+
+<p>The logic analyzer traces show the 7 colors.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/pico-neopixel-signals-option-a-zoomout.png" alt="" /></p>
+
+<p>The logic analyser traces show the Red LED signal zoomed in.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/pico-neopixel-signals-option-a-zoomin.png" alt="" /></p>
+
+<h2 id="option-b-cascading-pixels">Option B: Cascading pixels</h2>
+
+<p><a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/pico-neopixel/pico-neopixel-option-B.sal" class="button is-primary">Download Saleae Analyser File</a></p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/pico-neopixel-prototype-option-b.png" alt="" /></p>
+
+<p>The logic analyzer shows one signal that is cascading with multiple colors.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/pico-neopixel-signals-option-b-zoomout.png" alt="" /></p>
+
+<p>The logic analyzer shows a zoomed-in signal of the cascading colors.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/pico-neopixel-signals-option-b-zoomin.png" alt="" /></p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://github.com/raspberrypi/pico-examples/blob/master/pio/ws2812/ws2812.c">Raspberry Pi Pico example with WS2812</a></li>
+        
+        <li id="footnote-2"><a href="https://cdn-shop.adafruit.com/datasheets/WS2812.pdf">WS2812 Datasheet</a></li>
+        
+        <li id="footnote-3"><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide">Adafruit NeoPixel Überguide</a></li>
+        
+        <li id="footnote-4"><a href="https://learn.adafruit.com/neopixel-levelshifter">Level shifting with Neopixel</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

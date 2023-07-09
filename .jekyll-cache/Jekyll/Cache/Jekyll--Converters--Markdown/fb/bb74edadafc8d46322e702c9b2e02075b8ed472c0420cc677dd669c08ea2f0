@@ -1,0 +1,40 @@
+I"Ñ<p>After sleeping for a maximum period <code class="language-plaintext highlighter-rouge">ESP.deepSleep(ESP.deepSleepMax())</code>, the ESP8266 wakes up to send a ping to IFTTT cloud. <code class="language-plaintext highlighter-rouge">ESP.deepSleepMax()</code> returns <code class="language-plaintext highlighter-rouge">(uint64_t)system_rtc_clock_cali_proc()*(0x80000000-1)/(0x1000)</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>system_rtc_clock_cali_proc
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Get RTC clock period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Prototype</td>
+      <td><code class="language-plaintext highlighter-rouge">uint32	system_get_rtc_time(void)</code></td>
+    </tr>
+    <tr>
+      <td>Parameter</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <td>Return</td>
+      <td>RTC clock period (in us); <code class="language-plaintext highlighter-rouge">bit11</code> ~ <code class="language-plaintext highlighter-rouge">bit0</code> are decimal.</td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td><code class="language-plaintext highlighter-rouge">os_printf("clk	cal	:	%d	\r\n",system_rtc_clock_cali_proc()&gt;&gt;12);</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note</p>
+
+<ul>
+  <li>RTC clock period has decimal part</li>
+  <li>RTC clock period tends to drift with changes in temperature, so RTC timer is
+not very precise</li>
+</ul>
+:ET

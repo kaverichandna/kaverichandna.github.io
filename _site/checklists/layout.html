@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Checklists - 🔀 Layouts</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/checklists/layout" />
+  <meta name="description" content="🔀 Layouts">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/checklists/layout"/>
+  <meta property="og:title" content="🔀 Layouts"/>
+  <meta property="og:description" content="🔀 Layouts"/>
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_checklists/layout.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">🔀 Layouts</h1>
+    <p class="subtitle">Making complete PCB layouts</p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Optional footprints to include apart from the netlist</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Test points
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Open or bridged solder jumpers
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            0Ohm resistors
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            LEDs for power, TX/RX, other indicators
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Mounting holes
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Schematic</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Ensure Bill of Materials with vendor links and datasheets are ready
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Ensure schematic is divided up into functional logical blocks
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Refer to the correct datasheet version number
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Associate mostly SMD components with size <code>0805</code> for ease of manufacturing / assembly
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Ensure ERC passes
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Export fresh Netlist
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Grid</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Set coarse grid size od <code>50 mils</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Import new Netlist
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Net classes</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Check manufacturer capabilities on via size and track width
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Define Net classes for clearance,track width, via size, etc
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Define Net Classes filter E.g. <code>VBAT</code>, <code>VBUS</code>, <code>3V3</code> for power
+          </label>
+        </li>
+        
+      </ul><img src="/assets/images/checklists/net-class.png">
+      
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Component placement</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Group components into functional building blocks where possible with grid <code>25 mils</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Note components that require physical considerations at the edge E.g. connectors
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Place decoupling capacitors physically and electrically close to the desired components
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Make notes on the long rats nest
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Physical considerations</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Decide which logical blocks are on the front vs back layers
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Place connectors, battery holders, LEDs, switches, buttons and antennas for mechanical considerations with grid <code>25 mils</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Take note of critical routes such as differential pairs
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">PCB Outline</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Draw the edge cuts layer to contain all components with grid size <code>1.000mm</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Round all sharp edges on the edge cuts layer
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Lock footprint for big components
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Adjust components for less congested routing and space signal traces far apart
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add mounting holes as new footprints and lock them
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Silkscreen</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Adhere to <a href='/checklists/standards#text-size'>standard text size</a>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add project name, version, month and year
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add <a href="https://github.com/KiCad/kicad-footprints/blob/master/Symbol.pretty/OSHW-Logo2_9.8x8mm_SilkScreen.kicad_mod">open source hardware logo</a> <code>9.8x8mm</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add getting started URL
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add <code>+</code> and <code>-</code> annotations to all power connectors
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add voltage values to all power connectors
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add notes beside all optional components E.g. <code>DNP</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add placement marks for components
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add any info on assembly, test and bringing up the board
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Add any logos required and lock the footprint
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">Filled zones</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Lay down power and ground planes first
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Connect all the power and ground tracks to the planes
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Route components, signals and power paths on top layer and ground return on bottom layer
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Layout critical tracks and route them first E.g. uUSB differential pairs
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Snake tracks around the board
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Use standard grid size <code>10 mils</code> for routing traces
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Clear all errors for DRC
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2 has-background-warning-light">After layout</h2>
+
+    <div class="content is-medium">
+      <ul>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Run <code>b</code> to refill all zones on all layers in KiCad
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Ensure ERC and DRC are passing
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Look through the 3D view
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Print individual layers and check them
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Check manufacturer's Gerber file format
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Export layers <code>F.Cu</code>, <code>B.Cu</code>, <code>F.SilkS</code> <code>B.SilkS</code>, <code>F.Mask</code>, <code>B.Mas</code>, <code>Edge.Cuts</code> in Gerber format
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Export drill files <code>NPTH.drl</code>, <code>PTH.drl</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Check Gerber format layer by layer
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Check Solder mask openings smaller than the solder pad for stencils
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Check no text on solder pads
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Generate Drill map table and import as a graphic in the layout
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Git tag the gerber compressed folder and create a release <code>git tag -a V1.0 -m "V1.0" && git push --tags</code>
+          </label>
+        </li>
+        
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            Edit the release tag to <a href="https://github.com/hutscape/oak/releases/tag/V1.0">add the gerber zip folder</a>
+          </label>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container"><h2 class="title is-2">📚 References</h2>
+
+    <div class="content">
+      <ul>
+        
+        <li><a href="https://docs.oshpark.com/submitting-orders/drill-specs/">OSHPark manufacturing guidelines</a></li>
+        
+        <li><a href="https://jlcpcb.com/capabilities/Capabilities">JLCPCB manufacturing capabilities</a></li>
+        
+        <li><a href="https://www.pcbway.com/capabilities.html">PCBWay manufacturing capabilities</a></li>
+        
+        <li><a href="https://alternatezone.com/electronics/files/PCBDesignTutorialRevA.pdf">PCB Design Tutorial</a></li>
+        
+        <li><a href="https://www.signalintegrityjournal.com/blogs/12-fundamentals/post/1207-seven-habits-of-successful-2-layer-board-designers#comments">Seven Habits of Successful 2-Layer Board Designers</a></li>
+        
+        <li><a href="https://www.pcbway.com/blog/help_center/Generate_Gerber_file_from_Kicad_5_1_6.html">Generate Gerber file from Kicad 5.1.6 for PCBWay</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

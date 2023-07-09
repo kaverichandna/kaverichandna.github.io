@@ -1,14 +1,14 @@
-title: Hutscape
-description: Everyday practical home automation projects
-url: "https://hutscape.com"
+title: Kaveri Chandna
+description: Data Science through the Lens 📈 📊 🖥️
+url: "https://kaverichandna.github.io"
 year: 2022
 markdown: kramdown
 permalink: /:title
-youtube: https://www.youtube.com/@sayanee
+youtube: 
 github:
-  repository_url: https://github.com/hutscape/hutscape.github.io
-  code_folder: https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/
-  demo_folder: https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/demo/
+  repository_url: https://github.com/kaverichandna/kaverichandna.github.io
+  code_folder: https://github.com/kaverichandna/kaverichandna.github.io/tree/master/_tutorials/code/
+  demo_folder: https://github.com/kaverichandna/kaverichandna.github.io/tree/master/_tutorials/demo/
 exclude: [
   _tutorials/code,
   CNAME,

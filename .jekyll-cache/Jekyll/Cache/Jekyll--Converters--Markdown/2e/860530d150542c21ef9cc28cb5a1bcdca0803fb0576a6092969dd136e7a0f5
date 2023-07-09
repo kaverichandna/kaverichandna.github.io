@@ -1,0 +1,26 @@
+I"Ÿ<p>Measure power consumption and current draw from a circuit.</p>
+
+<p>Connect the USB power gauge to the USB-TTL board.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Â </th>
+      <th>USB Power Gauge</th>
+      <th>USB-TTL Board</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Connect</td>
+      <td><code class="language-plaintext highlighter-rouge">GND</code></td>
+      <td><code class="language-plaintext highlighter-rouge">GND</code></td>
+    </tr>
+    <tr>
+      <td>Connect</td>
+      <td><code class="language-plaintext highlighter-rouge">TX</code></td>
+      <td><code class="language-plaintext highlighter-rouge">RX</code></td>
+    </tr>
+  </tbody>
+</table>
+:ET

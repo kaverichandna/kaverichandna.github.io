@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>Hutscape | Tutorials - Waveshare 1.54 inch with Arduino Zero</title>
+  
+
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="http://localhost:4000/tutorials/waveshare-1in54-e-paper-samd21g" />
+  <meta name="description" content="Waveshare 1.54 inch with Arduino Zero">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Hutscape"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://localhost:4000/tutorials/waveshare-1in54-e-paper-samd21g"/>
+  <meta property="og:title" content="Waveshare 1.54 inch with Arduino Zero"/>
+  <meta property="og:description" content="Waveshare 1.54 inch with Arduino Zero"/>
+  
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-prototype.JPG" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="1000" />
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="http://localhost:4000/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="http://localhost:4000/assets/android-chrome-512x512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:4000/assets/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:4000/assets/favicon-32x32.png">
+  <link rel="manifest" href="http://localhost:4000/assets/site.webmanifest">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/a11y-dark.min.css">
+  <link href="//fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+
+  <style>
+    .highlight { overflow: auto; margin: 24px 0;}
+    figure.highlight { max-height: 600px; }
+    .content figure { text-align: inherit; }
+
+    .level { margin-bottom: 0 !important; }
+    .handwriting { font-family: 'Schoolbell', cursive; transform: rotate(-5deg); margin: 0 0.5em; line-height: 1; }
+  </style>
+
+  
+
+  
+  <style>
+    .video-container { position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden; }
+    .video-container iframe, .video-container object, .video-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .content img { display: block; margin: 30px; max-width: 800px; border: #efefef 20px solid; }
+  </style>
+  
+</head>
+<body>
+
+<nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/"> Hutscape </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start"><a class="navbar-item" href="/tutorials">Tutorials</a><a class="navbar-item" href="/checklists">Checklists</a><a class="navbar-item" href="/tools">Tools</a></div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <p class="handwriting has-text-grey-light">Spotted <br>a mistake?</p>
+          <a class="button is-primary" href="https://github.com/hutscape/hutscape.github.io/blob/master/_tutorials/waveshare-1in54-e-paper-samd21g.md"><strong>Edit this page</strong></a>
+          <a class="button is-light" href="https://github.com/hutscape/hutscape.github.io">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
+          <a class="button is-light" href="https://www.youtube.com/@sayanee">
+            <span class="icon">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section is-small">
+  <div class="container">
+    <h1 class="title is-1 has-background-info-light">Waveshare 1.54 inch with Arduino Zero</h1>
+    <div class="field is-grouped is-grouped-multiline">
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-danger">dev board</span>
+          <span class="tag is-light">RobotDyn M0 mini</span>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-info">firmware</span>
+          <span class="tag is-light">Arduino</span>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">SAMD21</span>
+        </div>
+      </div>
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-warning">chip</span>
+          <span class="tag is-light">Waveshare</span>
+        </div>
+      </div>
+      
+      
+
+      
+
+      
+
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-success">features</span>
+          
+          <span class="tag is-light">e-paper</span>
+          
+          <span class="tag is-light">e-ink</span>
+          
+          <span class="tag is-light">SPI</span>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag is-light is-link">e-paper version</span>
+          <span class="tag is-light">1</span>
+        </div>
+      </div>
+      
+      
+    </div>
+    <hr>
+
+    
+    <h2 class="title is-2">Before starting</h2>
+    
+
+    <div class="columns is-desktop">
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Dependancies</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Ensure the following dependancies are downloaded and available:</div>
+            <div class="content">
+              <ul>
+                
+                <li><a href="https://github.com/arduino/ArduinoCore-samd">Arduino core for SAMD</a></li>
+                
+                <li><a href="https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54">Waveshare e-paper for epd1in54 V1</a></li>
+                
+                <li><a href="https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54_V2">Waveshare e-paper for epd1in54 V2</a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Pre-requisites</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">Try these simpler or similar examples:</div>
+            <div class="content">
+              <ol>
+                
+                <li><a href="./waveshare-1in54-v2-e-paper-samd21g">Waveshare 1.54 inch V2.1 with Arduino Zero</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      <div class="column">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">Buy the components</p>
+          </header>
+
+          <div class="card-content">
+            <div class="content">
+              <ol>
+                
+                <li><a href="https://s.click.aliexpress.com/e/_AZG8aU">RobotDyn M0 Mini</a></li>
+                
+                <li><a href="https://amzn.to/3n7gLtk">WaveShare 1.54in E-Ink module V1</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Code</h2>
+    
+
+    
+      <!-- For Arduino INO file code examples -->
+      <a href="https://github.com/hutscape/hutscape.github.io/tree/master/_tutorials/code/waveshare-1in54-e-paper-samd21g" class="button is-primary">Download code</a>
+      <code class="is-size-4">waveshare-1in54-e-paper-samd21g.ino</code>
+      
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include</span> <span class="cpf">&lt;Arduino.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;SPI.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">"epd1in54.h"</span><span class="cp">
+#include</span> <span class="cpf">"epdpaint.h"</span><span class="cp">
+</span>
+<span class="cp">#define COLORED     0
+#define UNCOLORED   1
+</span>
+<span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">image</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+<span class="n">Paint</span> <span class="nf">paint</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="n">Epd</span> <span class="n">epd</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">count_string</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="sc">'0'</span><span class="p">,</span> <span class="sc">'0'</span><span class="p">,</span> <span class="sc">'0'</span><span class="p">,</span> <span class="sc">'\0'</span><span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">SerialUSB</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">SerialUSB</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+  <span class="n">SerialUSB</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Start E-ink display..."</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">sprintf</span><span class="p">(</span><span class="n">count_string</span><span class="p">,</span> <span class="s">"%d"</span><span class="p">,</span> <span class="o">++</span><span class="n">count</span><span class="p">);</span>
+  <span class="n">SerialUSB</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">count_string</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">epd</span><span class="p">.</span><span class="n">Init</span><span class="p">(</span><span class="n">lut_full_update</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">SerialUSB</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"e-Paper init failed"</span><span class="p">);</span>
+    <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="n">epd</span><span class="p">.</span><span class="n">ClearFrameMemory</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>
+  <span class="n">epd</span><span class="p">.</span><span class="n">DisplayFrame</span><span class="p">();</span>
+  <span class="n">epd</span><span class="p">.</span><span class="n">ClearFrameMemory</span><span class="p">(</span><span class="mh">0xFF</span><span class="p">);</span>
+  <span class="n">epd</span><span class="p">.</span><span class="n">DisplayFrame</span><span class="p">();</span>
+
+  <span class="n">paint</span><span class="p">.</span><span class="n">SetRotate</span><span class="p">(</span><span class="n">ROTATE_0</span><span class="p">);</span>
+  <span class="n">paint</span><span class="p">.</span><span class="n">SetWidth</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+  <span class="n">paint</span><span class="p">.</span><span class="n">SetHeight</span><span class="p">(</span><span class="mi">24</span><span class="p">);</span>
+
+  <span class="n">paint</span><span class="p">.</span><span class="n">Clear</span><span class="p">(</span><span class="n">UNCOLORED</span><span class="p">);</span>
+  <span class="n">paint</span><span class="p">.</span><span class="n">DrawStringAt</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">count_string</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">Font16</span><span class="p">,</span> <span class="n">COLORED</span><span class="p">);</span>
+  <span class="n">epd</span><span class="p">.</span><span class="n">SetFrameMemory</span><span class="p">(</span>
+    <span class="n">paint</span><span class="p">.</span><span class="n">GetImage</span><span class="p">(),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">paint</span><span class="p">.</span><span class="n">GetWidth</span><span class="p">(),</span> <span class="n">paint</span><span class="p">.</span><span class="n">GetHeight</span><span class="p">());</span>
+
+  <span class="n">epd</span><span class="p">.</span><span class="n">DisplayFrame</span><span class="p">();</span>
+
+  <span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
+  <span class="n">epd</span><span class="p">.</span><span class="n">Sleep</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+
+      <h2 class="title is-2">Makefile</h2>
+      
+<figure class="highlight"><pre><code class="language-make" data-lang="make"><span class="nv">BOARD</span><span class="o">?=</span>arduino:samd:mzero_bl
+<span class="nv">PORT</span> <span class="o">:=</span> <span class="nf">$(</span><span class="nb">shell</span> <span class="nb">ls</span> /dev/cu.usbmodem<span class="k">*</span><span class="nf">)</span>
+
+<span class="nl">.PHONY</span><span class="o">:</span> <span class="nf">default lint all flash clean</span>
+
+<span class="nl">default</span><span class="o">:</span> <span class="nf">all flash clean</span>
+
+<span class="nl">lint</span><span class="o">:</span>
+	cpplint <span class="nt">--extensions</span><span class="o">=</span>ino <span class="nt">--filter</span><span class="o">=</span><span class="nt">-legal</span>/copyright <span class="k">*</span>.ino
+
+<span class="nl">all</span><span class="o">:</span>
+	arduino-cli compile <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span> ./
+
+<span class="nl">flash</span><span class="o">:</span>
+	arduino-cli upload <span class="nt">-p</span> <span class="nv">$(PORT)</span> <span class="nt">--fqbn</span> <span class="nv">$(BOARD)</span>
+
+<span class="nl">clean</span><span class="o">:</span>
+	<span class="nb">rm</span> <span class="nt">-r</span> build</code></pre></figure>
+
+    
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="columns is-multiline is-desktop">
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Prototype</h2>
+        <p class="subtitle is-4">A photo of the actual setup.</p>
+        <a href="/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-prototype.JPG"><img
+            src="/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-prototype.JPG" alt="Waveshare 1.54 inch with Arduino Zero prototype"></a>
+      </div>
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Schematic</h2>
+        <p class="subtitle is-4">Wire up the hardware accordingly</p>
+        <a href="/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-schematic.png"><img
+            src="/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-schematic.png" alt="Waveshare 1.54 inch with Arduino Zero schematic"></a>
+      </div>
+      
+
+      
+
+      
+      <div class="column is-half">
+        <h2 class="title is-2">Serial console</h2>
+        <p class="subtitle is-4">Serial output from the firmware.</p>
+        <a href="/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-console.png"><img
+            src="/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-console.png" alt="Waveshare 1.54 inch with Arduino Zero serial console"></a>
+      </div>
+      
+
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section is-small">
+  <div class="container">
+    <div class="content is-medium">
+      <h2 class="title is-2">Description</h2>
+      <h2 id="version">Version</h2>
+
+<p>Check the version of the Waveshare module and use the example code for <a href="https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54">version 1</a> and <a href="https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54_V2">version 2</a> accordingly.</p>
+
+<h2 id="spi">SPI</h2>
+
+<p>The 4 non-SPI pins are defined in <code class="language-plaintext highlighter-rouge">epdif.h</code> file:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define RST_PIN         8
+#define DC_PIN          9
+#define CS_PIN          10
+#define BUSY_PIN        7
+</span></code></pre></div></div>
+
+<p>The SPI pins for Arduino M0 / SAMD21G are defined as following:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>SAMD21G Pin</th>
+      <th>I/O Pin</th>
+      <th>SERCOM-ALT</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">19</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PB10</code></td>
+      <td><code class="language-plaintext highlighter-rouge">SERCOM4/PAD[2]</code></td>
+      <td>MOSI</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">20</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PB11</code></td>
+      <td><code class="language-plaintext highlighter-rouge">SERCOM4/PAD[3]</code></td>
+      <td>SCK</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="" /></p>
+
+<h2 id="pins">Pins</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arduino Zero</th>
+      <th>Waveshare E-Ink module</th>
+      <th>SAMD21G</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D7</td>
+      <td>BUSY</td>
+      <td>PA21</td>
+    </tr>
+    <tr>
+      <td>D8</td>
+      <td>RST</td>
+      <td>PA06</td>
+    </tr>
+    <tr>
+      <td>D9</td>
+      <td>DC</td>
+      <td>PA07</td>
+    </tr>
+    <tr>
+      <td>D10</td>
+      <td>CS</td>
+      <td>PA18</td>
+    </tr>
+    <tr>
+      <td>CLK</td>
+      <td>SCK on ICSP connector</td>
+      <td>PB11</td>
+    </tr>
+    <tr>
+      <td>DIN</td>
+      <td>COPI on ISCP connector</td>
+      <td>PB10</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-pinout.png" alt="" /></p>
+
+    </div>
+  </div>
+</section>
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">References</h2>
+
+    <div class="content">
+      <ol>
+        
+        <li id="footnote-1"><a href="https://www.waveshare.com/product/1.54inch-e-Paper-Module.htm">Waveshare 1.54 inch e-paper module</a></li>
+        
+        <li id="footnote-2"><a href="https://www.waveshare.com/w/upload/5/5b/1.54inch_e-Paper_Schematic.pdf">Waveshare 1.54 inch e-paper schematic</a></li>
+        
+        <li id="footnote-3"><a href="https://github.com/soonuse/epd-library-arduino">E-Ink Arduino library</a></li>
+        
+        <li id="footnote-4"><a href="https://github.com/waveshare/e-Paper/blob/master/Arduino/epd1in54/epd1in54.ino">Code example for 1.54 inch e-paper</a></li>
+        
+        <li id="footnote-5"><a href="https://www.arduino.cc/en/reference/SPI">Arduino SPI</a></li>
+        
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<section class="section is-small">
+  <div class="container">
+    <h2 class="title is-2">Watch</h2>
+    <div class="video-container">
+      <iframe class="v" src="https://www.youtube-nocookie.com/embed/enfliRlCYbc" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <a property="dct:title" rel="cc:attributionURL" href="https://hutscape.com">Hutscape</a> © 2022 by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://sayan.ee">Sayanee Basu</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0</a>
+      <br>
+      The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      <br>
+      <a href="https://www.flaticon.com/free-icon/home_6675253?related_id=6675253&origin=tag" title="house icons">House logo</a> created by smashingstocks, Flaticon </a>
+    </p>
+  </div>
+</footer>
+<!-- Scripts --><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+        const target = el.dataset.target;
+        console.log(target)
+        const $target = document.getElementById(target);
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+      });
+    });
+  }
+});
+</script>
+<script src="//use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.js"></script>
+<script>anchors.add()</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+I"Ð	<h3 id="installing-esphome-cli">Installing ESPHome CLI</h3>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python <span class="nt">--version</span>
+Python 3.10.6
+
+<span class="nv">$ </span>pip3 <span class="nt">--version</span>
+pip 22.2.2
+
+<span class="nv">$ </span>pip3 <span class="nb">install </span>wheel
+<span class="nv">$ </span>pip3 <span class="nb">install </span>esphome
+<span class="nv">$ </span>esphome version
+Version: 2022.8.3
+</code></pre></div></div>
+
+<h3 id="compile-and-upload">Compile and upload</h3>
+
+<ol>
+  <li>
+    <p><a href="https://esphome.io/guides/cli.html#compile-command">Compile</a> firmware for this board</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> esphome compile hello-esphome-esp32s3.yaml
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port of the board and check the port address</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.usbmodem14101
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><a href="https://esphome.io/guides/cli.html#upload-command">Upload</a> the firmware</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> esphome upload <span class="nt">--device</span> /dev/cu.usbmodem14101 hello-esphome-esp32s3.yaml
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="access-logs">Access logs</h3>
+
+<ol>
+  <li>Unplug and plug into the <code class="language-plaintext highlighter-rouge">UART</code> port of the board</li>
+  <li>
+    <p>Check the new port address</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Access the <a href="https://esphome.io/guides/cli.html#logs-command">logs</a></p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> esphome logs <span class="nt">--device</span> /dev/cu.usbserial-1410 hello-esphome-esp32s3.yaml
+</code></pre></div>    </div>
+  </li>
+</ol>
+:ET
