@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <p class="title is-1">{{ page.title | escape }}</p>
+      {% if page.subtitle %}
+        <p class="subtitle is-5">{{ page.subtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% if page.url == "/tools" %}
+  {%- include navbar-tools.html -%}
+  {%- include first-tool.html -%}
+{%- endif -%}
+
+<section class="section is-small">
+  <div class="container">
+    {{ content }}
+  </div>
+</section>
