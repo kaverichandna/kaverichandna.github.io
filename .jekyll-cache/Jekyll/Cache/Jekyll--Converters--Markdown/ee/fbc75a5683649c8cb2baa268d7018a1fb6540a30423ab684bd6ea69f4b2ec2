@@ -1,4 +1,0 @@
-I"©<p>Turn on/off LED on-board <a href="https://github.com/webusb/arduino#compatible-hardware">compatible arduino hardware</a> through the commands received <code class="language-plaintext highlighter-rouge">H</code> and <code class="language-plaintext highlighter-rouge">L</code> from the browser on the laptop which is connected to the hardware.</p>
-
-<p>Use this firmware with the <a href="./webusb-led">browser code</a>.</p>
-:ET

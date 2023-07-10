@@ -1,7 +1,0 @@
-I"y<p>Display temperature and humidity values with sensor <code class="language-plaintext highlighter-rouge">HTS221</code> on Arduino Nano 33 BLE Sense board.</p>
-
-<p>Install the dependancy:</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arduino-cli lib <span class="nb">install </span>Arduino_HTS221
-</code></pre></div></div>
-:ET

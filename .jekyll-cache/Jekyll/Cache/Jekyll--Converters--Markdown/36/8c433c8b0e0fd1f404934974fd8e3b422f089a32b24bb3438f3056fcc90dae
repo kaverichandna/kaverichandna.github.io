@@ -1,2 +1,0 @@
-I"ö<p>Some patterns for toggling on and off debug print messages in Arduino firmware with <code class="language-plaintext highlighter-rouge">#ifdef</code> and a header file <code class="language-plaintext highlighter-rouge">DebugUtils.h</code>.</p>
-:ET

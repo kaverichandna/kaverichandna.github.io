@@ -1,6 +1,0 @@
-I"Y<p>This example contains the Haversine implement in Arduino. 3 Lat-Long values were picked up from Google Maps and cross-checked with the Arduino implementation result.</p>
-
-<p>E.g. Distance between Reichstag and Brandenburg Gate in Berlin</p>
-
-<p><img src="http://localhost:4000/assets/images/tutorials/haversine-google-maps.png" alt="" /></p>
-:ET

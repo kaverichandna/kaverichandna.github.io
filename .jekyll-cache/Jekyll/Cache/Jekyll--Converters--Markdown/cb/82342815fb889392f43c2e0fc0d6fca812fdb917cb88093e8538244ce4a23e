@@ -1,2 +1,0 @@
-I"k<p>Sleep to wakeup without radio with <code class="language-plaintext highlighter-rouge">ESP.deepSleep(5000000, WAKE_RF_DISABLED);</code>, but on wakeup start the radio manually <code class="language-plaintext highlighter-rouge">WiFi.forceSleepWake()</code> after satisfying some conditions. This is done to save more battery as using the radio is expensive.</p>
-:ET

@@ -1,6 +1,0 @@
-I"	<p>Send and receive at the same time from another node! Use this code with <a href="lora-duplex-b">duplex b</a>.</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">byte</span> <span class="n">localAddress</span> <span class="o">=</span> <span class="mh">0xBB</span><span class="p">;</span>
-<span class="n">byte</span> <span class="n">destination</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span>
-</code></pre></div></div>
-:ET

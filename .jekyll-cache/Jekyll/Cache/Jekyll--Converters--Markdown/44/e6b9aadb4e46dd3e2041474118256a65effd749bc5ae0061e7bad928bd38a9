@@ -1,6 +1,0 @@
-I"	<h3 id="troubleshooting-port-not-available">Troubleshooting: Port not available</h3>
-
-<p>While sleeping, the port will not be available via the <code class="language-plaintext highlighter-rouge">USB</code> port. Hence, a delay has been added by blinking the LED to make time for uploading firmware in development.</p>
-
-<p><a href="http://localhost:4000/assets/images/tutorials/timer-wakeup-port-unavailable.png"><img src="http://localhost:4000/assets/images/tutorials/timer-wakeup-port-unavailable.png" alt="" /></a></p>
-:ET
