@@ -1,4 +1,5 @@
 - name: Fake News
+  linkname: fake-news
   sequence: 5
   url: /fake-news
   description: 🏷️ Building a model to accurately classify a piece of news as real or fake 🗞️

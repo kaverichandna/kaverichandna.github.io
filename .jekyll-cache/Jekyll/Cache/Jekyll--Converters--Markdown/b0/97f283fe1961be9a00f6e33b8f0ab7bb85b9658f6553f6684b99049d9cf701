@@ -1,11 +1,7 @@
----
-layout: default
----
-
-<section class="hero is-medium is-light">
+I"}<section class="hero is-medium is-light">
   <div class="hero-body">
     <div class="container">
-      <p class="subtitle is-1">{{ site.description }}</p>
+      <p class="subtitle is-1">Data Science through the Lens</p>
       <p class="subtitle is-1 is-spaced">📊 📈 🖥️ 👩‍💻 🎓 💡 🌎 🧮</p>
     </div>
   </div>
@@ -19,39 +15,34 @@ layout: default
 </section>
 
 <div class="container">
-  {% assign projects = site.data.projects | sort: 'sequence' %}
-  {% for project in projects reversed %}
+  
+  
   <section class="section is-small">
     <div class="columns">
       <div class="column is-3">
-        <img src="https://kaverichandna.github.io/{{ project.linkname | downcase }}/images/front.jpg" alt="{{ project.name }} photo">
+        <img src="https://kaverichandna.github.io/fake-news/images/front.jpg" alt="Fake News photo" />
       </div>
       <div class="column is-9">
         <div class="level">
           <div class="level-left">
             <div class="level-item">
-              <h2 class="title is-2 is-spaced">{{ project.name }}</h2>
+              <h2 class="title is-2 is-spaced">Fake News</h2>
             </div>
           </div>
           <div class="level-right">
             <div class="level-item">
               <div class="control">
-                {% if project.completion %}
-                <div class="tags has-addons">
-                  <span class="tag is-medium is-light">completed</span>
-                  <span class="tag is-medium is-success is-light">{{project.completion}}</span>
-                </div>
-                {% else %}
+                
                 <div class="tags has-addons">
                   <span class="tag is-medium is-light is-light">ongoing</span>
-                  <span class="tag is-medium is-warning is-light">since {{project.started}}</span>
+                  <span class="tag is-medium is-warning is-light">since July 2023</span>
                 </div>
-                {% endif %}
+                
               </div>
             </div>
           </div>
         </div>
-        <p class="subtitle is-4">{{ project.description }}</p>
+        <p class="subtitle is-4">🏷️ Building a model to accurately classify a piece of news as real or fake 🗞️</p>
         <div class="field is-grouped is-grouped-multiline">
           <div class="control">
             <div class="tags has-addons">
@@ -61,7 +52,7 @@ layout: default
                 </span>
                 power
               </span>
-              <span class="tag is-medium is-light">{{project.power}}</span>
+              <span class="tag is-medium is-light"></span>
             </div>
           </div>
           <div class="control">
@@ -72,7 +63,7 @@ layout: default
                 </span>
                 wireless
               </span>
-              <span class="tag is-light is-medium">{{project.wireless}}</span>
+              <span class="tag is-light is-medium"></span>
             </div>
           </div>
           <div class="control">
@@ -83,7 +74,7 @@ layout: default
                 </span>
                 sensor
               </span>
-              <span class="tag is-light is-medium">{{project.sensor}}</span>
+              <span class="tag is-light is-medium"></span>
             </div>
           </div>
           <div class="control">
@@ -94,39 +85,19 @@ layout: default
                 </span>
                 mcu
               </span>
-              <span class="tag is-light is-medium">{{project.mcu}}</span>
+              <span class="tag is-light is-medium"></span>
             </div>
           </div>
         </div>
         <div class="field is-grouped is-grouped-multiline">
-          {% if project.cogs_usd %}
-          <div class="control">
-            <div class="tags has-addons">
-              <span class="tag is-medium is-light">bom cost</span>
-              <span class="tag is-medium is-white">USD ${{ project.cogs_usd }}</span>
-            </div>
-          </div>
-          {% endif %}
-          {% if project.bom %}
-          <div class="control">
-            <div class="tags has-addons">
-              <span class="tag is-medium is-light">bom items</span>
-              <span class="tag is-medium is-white">{{project.bom}}</span>
-            </div>
-          </div>
-          {% endif %}
-          {% if project.battery_life %}
-          <div class="control">
-            <div class="tags has-addons">
-              <span class="tag is-medium is-light">battery life</span>
-              <span class="tag is-medium is-white">{{project.battery_life}}</span>
-            </div>
-          </div>
-          {% endif %}
+          
+          
+          
         </div>
-        <a class="button is-large is-fullwidth is-info" href="{{site.url}}{{ project.url }}">How to build it</a>
+        <a class="button is-large is-fullwidth is-info" href="http://localhost:4000/fake-news">How to build it</a>
       </div>
     </div>
   </section>
-  {% endfor %}
+  
 </div>
+:ET
