@@ -6,7 +6,7 @@ layout: default
   <div class="hero-body">
     <div class="container">
       <p class="subtitle is-1">{{ site.description }}</p>
-      <p class="subtitle is-1 is-spaced">🍶 🗝 🎐 🧺 👜 🔋 📦 📃 🚪 💡 🏡</p>
+      <p class="subtitle is-1 is-spaced">📊 📈 🖥️ 👩‍💻 🎓 💡 🌎 🧮</p>
     </div>
   </div>
 </section>
@@ -14,7 +14,7 @@ layout: default
 <section class="section is-medium">
   <div class="container">
     <p class="title is-1 has-text-centered"> Projects created </p>
-    <p class="subtitle has-text-centered"> with open source hardware and software</p>
+    <p class="subtitle has-text-centered"> by a data science student, using open-source</p>
   </div>
 </section>
 

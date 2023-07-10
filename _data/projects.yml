@@ -1,13 +1,20 @@
-- name: Capsicum
+- name: Fake News
   sequence: 5
-  url: /capsicum
-  description: 🫑 Retrofit a wired doorbell to add WiFi and make it smart 🔔
-  wireless: WiFi
-  mcu: ESP32
-  sensor: bell
-  power: AAA
+  url: /fake-news
+  description: 🏷️ Building a model to accurately classify a piece of news as real or fake 🗞️
+  difficulty: Easy
+  language: Python
+  packages:
+    - Numpy
+    - Pandas
+    - Sklearn
+  category: Data Mining
+  # wireless: WiFi
+  # mcu: ESP32
+  # sensor: bell
+  # power: AAA
   status: ongoing
-  started: April 2022
+  started: July 2023
 
 - name: Oak
   sequence: 4
