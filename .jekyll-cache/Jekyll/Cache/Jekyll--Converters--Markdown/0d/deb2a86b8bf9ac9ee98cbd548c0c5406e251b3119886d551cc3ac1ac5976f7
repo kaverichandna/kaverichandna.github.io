@@ -1,0 +1,10 @@
+I"œ<p>View the decoded asynchronous serial signal from the graph produced by Saleae.</p>
+
+<p>Capture the signal in Saleae:</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/logic-analyzer-uart-all-signals.png" alt="" /></p>
+
+<p>Add asynchronous serial to decode the captured signal:</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/logic-analyzer-uart-decoded-signal.png" alt="" /></p>
+:ET

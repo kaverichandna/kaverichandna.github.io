@@ -1,0 +1,22 @@
+I"È<p>Create a blinky LED with RaspberryPI Pico board with <code class="language-plaintext highlighter-rouge">RP2040</code> microcontroller using the native C/C++ SDK.</p>
+
+<h2 id="install-the-toolchain-on-macos">Install the toolchain on macOS</h2>
+
+<p>Refer <a href="https://datasheets.raspberrypi.org/pico/getting-started-with-pico.pdf">Getting started with Raspberry Pi Pico</a> PDF document for Linux or Windows.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>CHOOSE_YOUR_PICO_SDK_PATH
+git clone git@github.com:raspberrypi/pico-sdk.git
+
+brew <span class="nb">install </span>cmake
+brew tap ArmMbed/homebrew-formulae
+brew <span class="nb">install </span>arm-none-eabi-gcc
+
+<span class="c"># vs code extensions</span>
+code <span class="nt">--install-extension</span> marus25.cortex-debug
+code <span class="nt">--install-extension</span> ms-vscode.cmake-tools
+code <span class="nt">--install-extension</span> ms-vscode.cpptools
+
+<span class="c"># environment variable for the pico-sdk installation apth</span>
+<span class="nb">export </span><span class="nv">PICO_SDK_PATH</span><span class="o">=</span>~/PATH/TO/pico-sdk
+</code></pre></div></div>
+:ET

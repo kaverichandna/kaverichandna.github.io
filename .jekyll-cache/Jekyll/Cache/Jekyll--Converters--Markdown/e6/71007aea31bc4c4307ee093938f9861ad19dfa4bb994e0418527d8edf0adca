@@ -1,0 +1,89 @@
+I"q	<h2 id="version">Version</h2>
+
+<p>Check the version of the Waveshare module and use the example code for <a href="https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54">version 1</a> and <a href="https://github.com/waveshare/e-Paper/tree/master/Arduino/epd1in54_V2">version 2</a> accordingly.</p>
+
+<h2 id="spi">SPI</h2>
+
+<p>The 4 non-SPI pins are defined in <code class="language-plaintext highlighter-rouge">epdif.h</code> file:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define RST_PIN         8
+#define DC_PIN          9
+#define CS_PIN          10
+#define BUSY_PIN        7
+</span></code></pre></div></div>
+
+<p>The SPI pins for Arduino M0 / SAMD21G are defined as following:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>SAMD21G Pin</th>
+      <th>I/O Pin</th>
+      <th>SERCOM-ALT</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">19</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PB10</code></td>
+      <td><code class="language-plaintext highlighter-rouge">SERCOM4/PAD[2]</code></td>
+      <td>MOSI</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">20</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PB11</code></td>
+      <td><code class="language-plaintext highlighter-rouge">SERCOM4/PAD[3]</code></td>
+      <td>SCK</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/lora-duplex-samd21g-pin-mux.png" alt="" /></p>
+
+<h2 id="pins">Pins</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Arduino Zero</th>
+      <th>Waveshare E-Ink module</th>
+      <th>SAMD21G</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D7</td>
+      <td>BUSY</td>
+      <td>PA21</td>
+    </tr>
+    <tr>
+      <td>D8</td>
+      <td>RST</td>
+      <td>PA06</td>
+    </tr>
+    <tr>
+      <td>D9</td>
+      <td>DC</td>
+      <td>PA07</td>
+    </tr>
+    <tr>
+      <td>D10</td>
+      <td>CS</td>
+      <td>PA18</td>
+    </tr>
+    <tr>
+      <td>CLK</td>
+      <td>SCK on ICSP connector</td>
+      <td>PB11</td>
+    </tr>
+    <tr>
+      <td>DIN</td>
+      <td>COPI on ISCP connector</td>
+      <td>PB10</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/waveshare-1in54-e-paper-samd21g-pinout.png" alt="" /></p>
+:ET

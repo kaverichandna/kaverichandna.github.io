@@ -1,0 +1,4 @@
+I"f<p>Create an mDNS <code class="language-plaintext highlighter-rouge">http://cactus.local</code> in the Access Point to visit a created web page instead of <code class="language-plaintext highlighter-rouge">https://192.168.4.1</code> for easy user experience.</p>
+
+<p>Only <a href="https://github.com/esp8266/Arduino/tree/0da6906499aaa9977f7b456c6ec32c090b117cef">Arduino ESP8266 <code class="language-plaintext highlighter-rouge">0da6906</code></a> tree works for mDNS in AP mode, so <a href="https://github.com/esp8266/Arduino#using-git-version-basic-instructions">install only the current master branch</a>.</p>
+:ET

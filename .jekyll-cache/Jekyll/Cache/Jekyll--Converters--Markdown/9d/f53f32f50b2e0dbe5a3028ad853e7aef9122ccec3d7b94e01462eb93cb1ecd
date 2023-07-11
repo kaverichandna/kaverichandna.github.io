@@ -1,0 +1,2 @@
+I"<<p>Connect to a compatible USB device and detect it on the browser. Check <code class="language-plaintext highlighter-rouge">lsusb</code> on Linux or <code class="language-plaintext highlighter-rouge">system_profiler SPUSBDataType</code> on MacOSX for <strong>Vendor ID</strong> and <strong>Product ID</strong>.</p>
+:ET

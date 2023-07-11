@@ -1,0 +1,80 @@
+I"!<h3 id="led">LED</h3>
+
+<p><code class="language-plaintext highlighter-rouge">LED_BUILTIN</code> is pin 48 as defined in the <a href="https://github.com/espressif/arduino-esp32/blob/master/variants/esp32s3/pins_arduino.h#L17">Arduino variant</a> and <a href="https://dl.espressif.com/dl/SCH_ESP32-S3-DEVKITC-1_V1_20210312C.pdf">schematic</a>.</p>
+
+<p>Alternatively <code class="language-plaintext highlighter-rouge">#define LED 5</code> can be used as well to test a simpler LED.</p>
+
+<p><a href="http://localhost:4000/assets/images/tutorials/blinky-arduino-esp32s3-schematic.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-arduino-esp32s3-schematic.png" alt="" /></a></p>
+
+<h3 id="upload-using-usb-port">Upload using USB port</h3>
+
+<ol>
+  <li>There are 2 ports on the board: <code class="language-plaintext highlighter-rouge">USB</code> and <code class="language-plaintext highlighter-rouge">UART</code></li>
+  <li>
+    <p>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port and check the addresses</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.usbmodem14101
+</code></pre></div>    </div>
+  </li>
+  <li>Upload using the <code class="language-plaintext highlighter-rouge">USB</code> port for example, <code class="language-plaintext highlighter-rouge">/dev/cu.usbmodem14101</code> with <code class="language-plaintext highlighter-rouge">USB CDC on Boot</code> enabled or disabled:
+    <ul>
+      <li><strong>disable</strong> if you want to access the serial monitor via the <code class="language-plaintext highlighter-rouge">UART</code> port or <code class="language-plaintext highlighter-rouge">TX/RX</code> with an external <code class="language-plaintext highlighter-rouge">UART-to-USB</code> bridge</li>
+      <li><strong>enable</strong> if you want to access the serial monitor via the <code class="language-plaintext highlighter-rouge">USB</code> port</li>
+    </ul>
+  </li>
+</ol>
+
+<p><a href="http://localhost:4000/assets/images/tutorials/blinky-arduino-esp32s3-settings.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-arduino-esp32s3-settings.png" alt="" /></a></p>
+
+<h3 id="access-serial-monitor-using-uart-port">Access serial monitor using UART port</h3>
+
+<ol>
+  <li>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port.</li>
+  <li>Compile and upload with <code class="language-plaintext highlighter-rouge">USB CDC on Boot</code> disabled.</li>
+  <li>
+    <p>Unplug and plug into the <code class="language-plaintext highlighter-rouge">UART</code> port and check the address</p>
+
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+</code></pre></div>    </div>
+  </li>
+  <li>Start the serial monitor in the port <code class="language-plaintext highlighter-rouge">/dev/cu.usbserial-1410</code> when plugged into <code class="language-plaintext highlighter-rouge">UART</code></li>
+</ol>
+
+<h3 id="access-serial-monitor-using-an-external-uart-usb-bridge">Access serial monitor using an external UART-USB bridge</h3>
+
+<p>Use this option when using an external power supply for the board.</p>
+
+<ol>
+  <li>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port of the board to the computer.</li>
+  <li>Compile and upload with <code class="language-plaintext highlighter-rouge">USB CDC on Boot</code> disabled.</li>
+  <li>Unplug from the <code class="language-plaintext highlighter-rouge">USB</code> port and into the power supply unit.</li>
+  <li>Connect <code class="language-plaintext highlighter-rouge">TX</code>, <code class="language-plaintext highlighter-rouge">RX</code> and <code class="language-plaintext highlighter-rouge">GND</code> to an external USB-UART bridge connected to the computer.
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-uart-bridge-schematic.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp32s3-uart-bridge-schematic.png" alt="" /></a></li>
+  <li>Plug into the <code class="language-plaintext highlighter-rouge">UART</code> port and check the address
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span><span class="nb">ls</span> /dev/cu.<span class="k">*</span>
+
+ /dev/cu.Bluetooth-Incoming-Port  /dev/cu.SLAB_USBtoUART  /dev/cu.usbserial-1410
+</code></pre></div>    </div>
+  </li>
+  <li>Start the serial monitor in the port <code class="language-plaintext highlighter-rouge">/dev/cu.usbserial-1410</code></li>
+</ol>
+
+<h3 id="access-serial-monitor-using-usb-port">Access serial monitor using USB port</h3>
+
+<ol>
+  <li>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port.</li>
+  <li>Compile and upload with <code class="language-plaintext highlighter-rouge">USB CDC on Boot</code> enabled.
+ <a href="http://localhost:4000/assets/images/tutorials/blinky-arduino-esp32s3-settings.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-arduino-esp32s3-settings.png" alt="" /></a></li>
+  <li>Plug into the <code class="language-plaintext highlighter-rouge">USB</code> port</li>
+  <li>Compile code with the menu item <code class="language-plaintext highlighter-rouge">USB CDC on Boot</code> Enabled on Arduino IDE
+    <ul>
+      <li>or on <code class="language-plaintext highlighter-rouge">arduino-cli</code> with <code class="language-plaintext highlighter-rouge">--fqbn esp32:esp32:esp32s3:CDCOnBoot=cdc</code></li>
+    </ul>
+  </li>
+  <li>Using the same USB port, access the serial monitor</li>
+</ol>
+:ET

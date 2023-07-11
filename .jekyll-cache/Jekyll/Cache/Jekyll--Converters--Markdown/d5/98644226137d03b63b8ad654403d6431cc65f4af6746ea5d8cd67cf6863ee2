@@ -1,0 +1,5137 @@
+I":‘<p class="subtitle">List of <strong>135</strong> getting started tutorials with <a href="https://stackoverflow.com/help/mcve">minimal, reproducible, complete code</a>.</p>
+
+<style id="search_style"></style>
+
+<nav class="panel">
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input class="input is-large" type="text" id="search" placeholder="search" />
+      <span class="icon is-small is-left">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </span>
+    </p>
+  </div>
+
+  
+  <a class="panel-block searchable" data-index="print debug and trace info with a libary, header file and ifdef debug trace print dump library ifdef header   samd21   arduino m0  " href="/tutorials/arduino-debug-trace">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Print debug and trace info with a libary, header file and ifdef
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino M0</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="debug print with ifdef and a header file debug ifdef print header   samd21   arduino m0  " href="/tutorials/arduino-debug">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Debug print with ifdef and a header file
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino M0</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="print dump and trace with a library debug trace print dump library   samd21   arduino m0  " href="/tutorials/arduino-trace">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Print dump and trace with a library
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino M0</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="bit mask with arduino on uno   atmega328p   arduino uno  " href="/tutorials/bitmask-arduino-uno">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Bit mask with Arduino on UNO
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ble publish uv index ble gatt  uv index  veml6075 nrf52   adafruit feather bluefruit  " href="/tutorials/ble-uvi">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    BLE publish UV Index
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">VEML6075</span>
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">UV Index</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with arduino on esp32-c3 blinky led serial esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-arduino-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with Arduino on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with arduino on esp32-s3 blinky led serial esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-arduino-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with Arduino on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky arduino uno   atmega328p   arduino uno  " href="/tutorials/blinky-arduino">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky Arduino UNO
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with esp-idf in vs code on esp32-c3 esp-idf blinky esp32c3 vscode   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-esp-idf-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with ESP-IDF in VS Code on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with esp32-s3 esp-idf in vs code esp-idf blinky esp32s3 vscode   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-esp-idf-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with ESP32-S3 ESP-IDF in VS Code
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky for esp32 lilygo t-beam   esp32-dowdq6   lilygo t-beam  " href="/tutorials/blinky-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky for ESP32 LilyGO T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky esp8266   esp8266   wemos d1 mini  " href="/tutorials/blinky-esp8266">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky ESP8266
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with esphome esp32-c3 esphome esp32c3 blinky   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-esphome-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with ESPHome ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with esphome esp32-s3 esphome esp32s3 blinky   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-esphome-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with ESPHome ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky arduino m0   samd21   robotdyn m0 mini  " href="/tutorials/blinky-m0">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky Arduino M0
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with micropython on esp32-c3 blinky led esp32c3 micropython ampy   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-micropython-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with Micropython on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky esp32-s3 with micropython blinky led esp32s3 micropython ampy   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-micropython-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky ESP32-S3 with Micropython
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky on arduino nano 33 ble sense board     arduino nano 33 ble sense  " href="/tutorials/blinky-nano33-ble-sense">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky on Arduino Nano 33 BLE Sense board
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino Nano 33 BLE Sense</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky nrf52   nrf52   adafruit feather bluefruit  " href="/tutorials/blinky-nrf52">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky nRF52
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with raspberrypi pico   rp2040   raspberrypi pico  " href="/tutorials/blinky-pico">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with RaspberryPI Pico
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RaspberryPI Pico</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">C</span>
+        
+          <span class="tag is-light is-info">C++</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">RP2040</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with platformio vs code on esp32-c3 blinky led serial esp32c3 platformio   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-platformio-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with PlatformIO VS Code on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with platformio vs code on esp32-s3 blinky led serial esp32s3 platformio   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-platformio-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with PlatformIO VS Code on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with rust on esp32-c3 rust blinky esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-rust-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with Rust on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="hello world esp32-s3 with rust rust serial esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-rust-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Hello world ESP32-S3 with Rust
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with tasmota on esp32-c3 tasmota esp32c3 toggle led   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/blinky-tasmota-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with Tasmota on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="blinky with tasmota on esp32-s3 tasmota esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/blinky-tasmota-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Blinky with Tasmota on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="connect to a wifi network with arduino on esp32-c3 wifi connect ssid esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/connect-wifi-arduino-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Connect to a WiFi network with Arduino on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="connect to a wifi network with arduino on esp32-s3 wifi connect ssid esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/connect-wifi-arduino-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Connect to a WiFi network with Arduino on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="cycling rgb led led   nrf52   adafruit feather bluefruit  " href="/tutorials/cycle-rgb-led">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Cycling RGB LED
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="d-flip-flop d-flip-flop   sn74hc174   arduino uno  " href="/tutorials/d-flipflop">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    D-Flip-Flop
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">SN74HC174</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="using 121gw multimeter as a data logger multimeter data logger     " href="/tutorials/data-logger-multimeter-121gw">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Using 121GW multimeter as a data logger
+    <div class="tags" style="margin-left:5px">
+      
+
+      
+
+      
+
+      
+        <span class="tag is-light is-danger">121GW EEVBlog Multimeter</span>
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="define options define variables options arduino-cli flags   atmega328p   arduino uno  " href="/tutorials/define-options">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Define options
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="dht22 sensor  temperature humidity  esp8266 dht22   wemos d1 mini  " href="/tutorials/dht22-sensor">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    DHT22 sensor
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+          <span class="tag is-light is-warning">DHT22</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">temperature</span>
+        
+        <span class="tag is-light is-primary">humidity</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display oled ssd1306 with lilygo t-beam display oled   esp32-dowdq6 ssd1306   lilygo t-beam  " href="/tutorials/display-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display OLED SSD1306 with LilyGO T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+          <span class="tag is-light is-warning">SSD1306</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display humidity with bar led bar led shift register  humidity  esp8266 74hc595 si7021   wemos d1 mini  " href="/tutorials/display-humidity-bar-led">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display humidity with bar LED
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+          <span class="tag is-light is-warning">74HC595</span>
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">humidity</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display lat long on t-beam display oled gps parsed   esp32-dowdq6 ssd1306 neo-6m   lilygo t-beam  " href="/tutorials/display-parsed-gps-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display Lat Long on T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+          <span class="tag is-light is-warning">SSD1306</span>
+        
+          <span class="tag is-light is-warning">NEO-6M</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display sensor values lipo uv temperature humidity   nrf52 veml6075 si7021   adafruit feather bluefruit  " href="/tutorials/display-sensors">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display sensor values
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+          <span class="tag is-light is-warning">VEML6075</span>
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display uv and lipo values lipo display  uv index  nrf52 veml6075   adafruit feather bluefruit  " href="/tutorials/display-uv-lipo">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display UV and LiPo values
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+          <span class="tag is-light is-warning">VEML6075</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">UV Index</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display uv values display  uv index  nrf52 veml6075   adafruit feather bluefruit  " href="/tutorials/display-uv">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display UV values
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+          <span class="tag is-light is-warning">VEML6075</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">UV Index</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="eeprom emulation with arduino api eeprom flash     robotdyn m0 mini  " href="/tutorials/eeprom-emulation-samd21">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    EEPROM Emulation with Arduino API
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="eeprom read and write string eeprom read write   esp8266   wemos d1 mini  " href="/tutorials/eeprom-esp8266">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    EEPROM read and write string
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="eeprom read and write numbers eeprom read write   atmega328p   arduino uno  " href="/tutorials/eeprom-int-arduino">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    EEPROM read and write numbers
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="eeprom read and write string eeprom read write string   atmega328p   arduino uno  " href="/tutorials/eeprom-string-arduino">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    EEPROM read and write string
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="erase wifi credentials   esp8266   wemos d1 mini  " href="/tutorials/erase-wifi-credentials">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Erase WiFi credentials
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="external wakeup with arduino on esp32-c3 external wakeup trigger sleep esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/external-wakeup-arduino-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    External wakeup with Arduino on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="external wakeup with arduino on esp32-s3 external wakeup trigger sleep esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/external-wakeup-arduino-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    External wakeup with Arduino on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="read and write to the flash memory flash read write   samd21   robotdyn m0 mini  " href="/tutorials/flash-storage-samd21">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Read and Write to the flash memory
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="form page in ap wifi access point form   esp8266   wemos d1 mini  " href="/tutorials/form-page-ap">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Form page in AP
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps parsing via i2c i2c  gps  pa1010d   arduino uno  " href="/tutorials/gps-pa1010d-arduino-i2c">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS parsing via I2C
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">PA1010D</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">GPS</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps parsing with m0 i2c i2c  gps  pa1010d   robotdyn m0 mini  " href="/tutorials/gps-pa1010d-m0-i2c">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS parsing with M0 I2C
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">PA1010D</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">GPS</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps logging with pa1010d and m0 uart  gps  pa1010d   robotdyn m0 mini  " href="/tutorials/gps-pa1010d-m0-logging">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS logging with PA1010D and M0
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">PA1010D</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">GPS</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps parsing with pa1010d and m0 uart google maps  gps  pa1010d   robotdyn m0 mini  " href="/tutorials/gps-pa1010d-m0-parsing">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS parsing with PA1010D and M0
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">PA1010D</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">GPS</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps pa1010d with m0 uart uart  gps  pa1010d   robotdyn m0 mini  " href="/tutorials/gps-pa1010d-m0">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS PA1010D with M0 UART
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">PA1010D</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">GPS</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps parsing for esp32 t-beam uart parsing  gps  esp32-dowdq6 neo-6m   lilygo t-beam  " href="/tutorials/gps-parsing-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS parsing for ESP32 T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+          <span class="tag is-light is-warning">NEO-6M</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">GPS</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="gps for esp32 t-beam uart  gps  esp32-dowdq6 neo-6m   lilygo t-beam  " href="/tutorials/gps-tbeam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GPS for ESP32 T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+          <span class="tag is-light is-warning">NEO-6M</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">gps</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="haversine forumla in arduino   esp32-dowdq6   lilygo t-beam  " href="/tutorials/haversine">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Haversine forumla in Arduino
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="hello world with arduino on esp32-s3 chip core version serial esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/hello-arduino-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Hello world with Arduino on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="hello world with esp-idf in vs code esp-idf serial esp32s3 vscode   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/hello-esp-idf-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Hello World with ESP-IDF in VS Code
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="hello world with esphome on esp32-s3 esphome esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/hello-esphome-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Hello world with ESPHome on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="get request to ifttt ifttt   esp8266   wemos d1 mini  " href="/tutorials/ifttt-get">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    GET request to IFTTT
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="post request to ifttt ifttt   esp8266   wemos d1 mini  " href="/tutorials/ifttt-post-data">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    POST request to IFTTT
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ir emitter infrared ir emitter  infrared  atmega328p   arduino uno  " href="/tutorials/ir-emitter">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    IR Emitter
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328p</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">infrared</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ir emit raw codes infrared ir emit raw  infrared    arduino uno  " href="/tutorials/ir-raw-emit">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    IR emit raw codes
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">infrared</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ir receiver raw codes infrared ir receive raw  infrared    robotdyn m0 mini  " href="/tutorials/ir-raw-receive-zero">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    IR Receiver raw codes
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">infrared</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ir receive raw codes infrared ir receive raw  infrared    arduino uno  " href="/tutorials/ir-raw-receive">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    IR Receive raw codes
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">infrared</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ir receiver infrared ir receiver  infrared  tsop4838   arduino uno  " href="/tutorials/ir-receiver">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    IR Receiver
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">TSOP4838</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">infrared</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="level shifter logic level shift 5v 3.3v bidirectional   bss138   arduino uno  " href="/tutorials/level-shifter-4channel">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Level shifter
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">BSS138</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="analyzing i2c signals i2c logic analyser   si7021   arduino uno  " href="/tutorials/logic-analyzer-i2c">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Analyzing I2C signals
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+      
+
+      
+        <span class="tag is-light is-danger">Saleae Logic Analyser</span>
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="analyzing non-standard signals i2c logic analyser  temperature  dht11   arduino uno  " href="/tutorials/logic-analyzer-signal">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Analyzing non-standard signals
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">DHT11</span>
+        
+      
+
+      
+        <span class="tag is-light is-danger">Saleae Logic Analyser</span>
+      
+
+      
+        
+        <span class="tag is-light is-primary">temperature</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="analyzing uart signals     arduino uno  " href="/tutorials/logic-analyzer-uart">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Analyzing UART signals
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+        <span class="tag is-light is-danger">Saleae Logic Analyzer</span>
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="wakeup after long sleep or button press eeprom button sleep wakeup   esp8266   wemos d1 mini  " href="/tutorials/long-sleep-or-button-press">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Wakeup after long sleep or button press
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="long deep sleep sleep eeprom wakeup   esp8266   wemos d1 mini  " href="/tutorials/long-sleep">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Long deep sleep
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora duplex a with esp32 t-beam lora duplex spi   esp32-dowdq6   lilygo t-beam  " href="/tutorials/lora-duplex-a-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa Duplex A with ESP32 T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora gps duplex a with esp32 t-beam lora duplex  gps  esp32-dowdq6   lilygo t-beam  " href="/tutorials/lora-duplex-a-gps-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa GPS Duplex A with ESP32 T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">gps</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora duplex a lora duplex spi     arduino uno  " href="/tutorials/lora-duplex-a">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa Duplex A
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora duplex b with esp32 t-beam lora duplex spi   esp32-dowdq6   lilygo t-beam  " href="/tutorials/lora-duplex-b-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa Duplex B with ESP32 T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora gps duplex b with esp32 t-beam lora duplex  gps  esp32-dowdq6   lilygo t-beam  " href="/tutorials/lora-duplex-b-gps-esp32-t-beam">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa GPS Duplex B with ESP32 T-Beam
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-DOWDQ6</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">gps</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora duplex b lora duplex spi     arduino uno  " href="/tutorials/lora-duplex-b">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa Duplex B
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora duplex samd21g lora duplex spi   samd21g   robotdyn m0 mini  " href="/tutorials/lora-duplex-samd21g">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa Duplex SAMD21G
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21G</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora rx lora rx spi     arduino uno  " href="/tutorials/lora-rx">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa RX
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="lora tx lora tx spi     arduino uno  " href="/tutorials/lora-tx">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    LoRa TX
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="maximum deep sleep sleep wakeup   esp8266   wemos d1 mini  " href="/tutorials/max-deep-sleep">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Maximum deep sleep
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="wakeup periodically after maximum sleep to ping the cloud sleep wakeup cloud ifttt   esp8266   wemos d1 mini  " href="/tutorials/max-sleep-ping">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Wakeup periodically after maximum sleep to ping the cloud
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="mdns in ap mode mdns access point   esp8266   wemos d1 mini  " href="/tutorials/mdns-access-point">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    mDNS in AP mode
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="measure battery voltage nrf52 voltage lipo battery voltage   nrf52   adafruit feather bluefruit  " href="/tutorials/measure-battery-nrf52">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Measure battery voltage nRF52
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="measure battery voltage esp8266 lipo battery voltage   esp8266   wemos d1 mini  " href="/tutorials/measure-battery-voltage">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Measure battery voltage ESP8266
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">esp8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="convert millis() to readable time millis time hours seconds minutes days     lilygo t-beam  " href="/tutorials/millis-hour-min-sec">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Convert millis() to readable time
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">arduino</span>
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="adding header and cpp files to arduino folder files header cpp src folder     arduino zero  " href="/tutorials/more-files">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Adding header and cpp files to Arduino folder
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino Zero</span>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="seperate files into header and c++ files imu header cpp files folders     arduino nano 33 ble sense  " href="/tutorials/nano33-ble-sense-imu-sensors">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Seperate files into header and c++ files
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino Nano 33 BLE Sense</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display imu data with lsm9ds1  imu  lsm9ds1   arduino nano 33 ble sense  " href="/tutorials/nano33-ble-sense-imu">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display IMU data with LSM9DS1
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino Nano 33 BLE Sense</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">LSM9DS1</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">IMU</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="split up code into more ino files  imu temperature humidity  lsm9ds1 hts221   arduino nano 33 ble sense  " href="/tutorials/nano33-ble-sense-more-ino">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Split up code into more ino files
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino Nano 33 BLE Sense</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">LSM9DS1</span>
+        
+          <span class="tag is-light is-warning">HTS221</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">IMU</span>
+        
+        <span class="tag is-light is-primary">temperature</span>
+        
+        <span class="tag is-light is-primary">humidity</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="display temperature and humidity data with hts221  temperature humidity  hts221   arduino nano 33 ble sense  " href="/tutorials/nano33-ble-sense-temperature-humidity">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Display temperature and humidity data with HTS221
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino Nano 33 BLE Sense</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">HTS221</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">temperature</span>
+        
+        <span class="tag is-light is-primary">humidity</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="neopixel with arduino uno neopixel   ws2812   arduino uno  " href="/tutorials/neopixel-ws2812">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Neopixel with Arduino UNO
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">WS2812</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="sleep with radio disabled sleep wakeup radio   esp8266   wemos d1 mini  " href="/tutorials/no-radio-start-radio">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Sleep with radio disabled
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="periodic or interrupt wakeup sleep wakeup   esp8266   wemos d1 mini  " href="/tutorials/periodic-wakeup-interrupt">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Periodic or interrupt wakeup
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="periodic wakeup with samd21 wakeup sleep periodic   samd21   robotdyn m0 mini  " href="/tutorials/periodic-wakeup">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Periodic wakeup with SAMD21
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="i2c bus scan with rpi pico   rp2040 si7021 vcnl4000   raspberrypi pico  " href="/tutorials/pico-i2c">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    I2C Bus Scan with RPi pico
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RaspberryPI Pico</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">C</span>
+        
+          <span class="tag is-light is-info">C++</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">RP2040</span>
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+          <span class="tag is-light is-warning">VCNL4000</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="neopixel with raspberrypi pico neopixel   rp2040 ws2812   raspberrypi pico  " href="/tutorials/pico-neopixel">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Neopixel with RaspberryPI Pico
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RaspberryPI Pico</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">C</span>
+        
+          <span class="tag is-light is-info">C++</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">RP2040</span>
+        
+          <span class="tag is-light is-warning">WS2812</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="pio i2c bus scan with pico   rp2040 si7021 vcnl4000   raspberrypi pico  " href="/tutorials/pico-pio-i2c">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    PIO I2C Bus Scan with Pico
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RaspberryPI Pico</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">C</span>
+        
+          <span class="tag is-light is-info">C++</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">RP2040</span>
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+          <span class="tag is-light is-warning">VCNL4000</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="power gauge usb power gauge     arduino uno  " href="/tutorials/power-gauge">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Power gauge
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+        <span class="tag is-light is-danger">USB Power gauge</span>
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="read digital pin in nrf52 digital read   nrf52   adafruit feather bluefruit  " href="/tutorials/read-pin">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Read digital pin in nRF52
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="rgb led nrf52 rgb led   nrf52   adafruit feather bluefruit  " href="/tutorials/rgb-led-nrf52">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    RGB LED nRF52
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="rollback to arduino / esp-idf on esp32-c3 rollback arduino esp-idf esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/rollback-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Rollback to Arduino / ESP-IDF on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="rollback to arduino / esp-idf on esp32-s3 rollback arduino esp-idf esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/rollback-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Rollback to Arduino / ESP-IDF on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="rtc memory rtc   esp8266   wemos d1 mini  " href="/tutorials/rtc-memory">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    RTC Memory
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="scan wifi with arduino on esp32-c3 scan wifi esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/scan-wifi-arduino-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Scan WiFi with Arduino on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="scan wifi with arduino on esp32-s3 scan wifi esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/scan-wifi-arduino-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Scan WiFi with Arduino on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="sensor si7021 with arduino   si7021   arduino uno  " href="/tutorials/sensor-si7021-arduino">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Sensor Si7021 with Arduino
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="sensor si7021 with esp8266  temperature humidity  esp8266 si7021   wemos d1 mini  " href="/tutorials/sensor-si7021">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Sensor Si7021 with ESP8266
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+          <span class="tag is-light is-warning">Si7021</span>
+        
+      
+
+      
+
+      
+        
+        <span class="tag is-light is-primary">temperature</span>
+        
+        <span class="tag is-light is-primary">humidity</span>
+        
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="uv sensor veml6075   nrf52 veml6075   adafruit feather bluefruit  " href="/tutorials/sensor-uv">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    UV Sensor VEML6075
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+          <span class="tag is-light is-warning">VEML6075</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="send command via serial monitor serial     arduino uno  " href="/tutorials/serial-send-arduino">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Send command via serial monitor
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="send command via serial monitor serial   esp8266   wemos d1 mini  " href="/tutorials/serial-send">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Send command via serial monitor
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="sharp display sharp display   nrf52   adafruit feather bluefruit  " href="/tutorials/sharp-display">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Sharp display
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="shift register shift register bar led   esp8266 74hc595   wemos d1 mini  " href="/tutorials/shift-register">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Shift register
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+          <span class="tag is-light is-warning">74HC595</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="string functions   atmega328p   arduino uno  " href="/tutorials/string-functions">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    String functions
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="arduino struct with functions in seperate folder struct function files header cpp pointer     lilygo t-beam  " href="/tutorials/struct-functions">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Arduino struct with functions in seperate folder
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">LilyGO T-Beam</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="ticker   esp8266   wemos d1 mini  " href="/tutorials/ticker">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Ticker
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="timer wakeup with arduino on esp32-c3 timer wakeup periodic esp32c3   esp32-c3-mini-1-n4   esp32-c3-devkitm-1  " href="/tutorials/timer-wakeup-arduino-esp32c3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Timer wakeup with Arduino on ESP32-C3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-C3-DevKitM-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-C3-MINI-1-N4</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="timer wakeup with arduino on esp32-s3 timer wakeup esp32s3   esp32-s3-wroom-1-n8r2   esp32-s3-devkitc-1  " href="/tutorials/timer-wakeup-arduino-esp32s3">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Timer wakeup with Arduino on ESP32-S3
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">ESP32-S3-DevKitC-1</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP32-S3-WROOM-1-N8R2</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="wakeup on interrupt wakeup interrupt   atmega328p   arduino uno  " href="/tutorials/wakeup-on-interrupt">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Wakeup on interrupt
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="periodic wakeup wakeup periodic   esp8266   wemos d1 mini  " href="/tutorials/wakeup-periodically">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Periodic wakeup
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="wakeup with no radio wakeup no radio   esp8266   wemos d1 mini  " href="/tutorials/wakeup-with-no-radio">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Wakeup with no radio
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="waveshare 1.54 inch with nrf52 e-paper e-ink spi   nrf52 waveshare   adafruit feather bluefruit  " href="/tutorials/waveshare-1in54-e-paper-nrf52">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Waveshare 1.54 inch with nRF52
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+          <span class="tag is-light is-warning">Waveshare</span>
+        
+      
+
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-link">e-paper v1</span>
+        
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="waveshare 1.54 inch with arduino zero e-paper e-ink spi   samd21 waveshare   robotdyn m0 mini  " href="/tutorials/waveshare-1in54-e-paper-samd21g">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Waveshare 1.54 inch with Arduino Zero
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+          <span class="tag is-light is-warning">Waveshare</span>
+        
+      
+
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-link">e-paper v1</span>
+        
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="waveshare 1.54 inch e-paper e-ink spi   atmega328p waveshare   arduino uno  " href="/tutorials/waveshare-1in54-e-paper">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Waveshare 1.54 inch
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Arduino UNO</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">ATmega328P</span>
+        
+          <span class="tag is-light is-warning">Waveshare</span>
+        
+      
+
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-link">e-paper v1</span>
+        
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="waveshare 1.54 inch v2.1 with arduino zero e-paper e-ink spi   samd21 waveshare   robotdyn m0 mini  " href="/tutorials/waveshare-1in54-v2-e-paper-samd21g">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Waveshare 1.54 inch V2.1 with Arduino Zero
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+          <span class="tag is-light is-warning">Waveshare</span>
+        
+      
+
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-link">e-paper v2.1</span>
+        
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="web ble detect ble   nrf52   adafruit feather bluefruit  " href="/tutorials/web-ble-detect">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Web BLE detect
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="web ble read changing gatt values ble gatt   nrf52   adafruit feather bluefruit  " href="/tutorials/web-ble-gatt">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Web BLE Read changing GATT values
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">Adafruit Feather Bluefruit</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">nRF52</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="hardware web api feature detection hardware web geolocation ble webusb     " href="/tutorials/web-hw-feature-detection">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Hardware Web API feature detection
+    <div class="tags" style="margin-left:5px">
+      
+
+      
+
+      
+
+      
+        <span class="tag is-light is-danger">Chrome web browser</span>
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="web usb detect device webusb     " href="/tutorials/webusb-detect">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Web USB detect device
+    <div class="tags" style="margin-left:5px">
+      
+
+      
+
+      
+
+      
+        <span class="tag is-light is-danger">Chrome web browser</span>
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="web usb led webusb   samd21   robotdyn m0 mini  " href="/tutorials/webusb-led">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Web USB LED
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="web usb receive from browser webusb   samd21   robotdyn m0 mini  " href="/tutorials/webusb-receive">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Web USB receive from browser
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="web usb send to browser webusb   samd21   robotdyn m0 mini  " href="/tutorials/webusb-send">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Web USB send to browser
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">RobotDyn M0 mini</span>
+      
+
+      
+        
+          <span class="tag is-light is-info">Arduino</span>
+        
+      
+
+      
+        
+          <span class="tag is-light is-warning">SAMD21</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="connect to client securely tls   esp8266   wemos d1 mini  " href="/tutorials/wifi-client-secure">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Connect to client securely
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+  <a class="panel-block searchable" data-index="connect to wifi   esp8266   wemos d1 mini  " href="/tutorials/wifi-esp8266">
+    <span class="panel-icon">
+      <i class="fas fa-book" aria-hidden="true"></i>
+    </span>
+    Connect to WiFi
+    <div class="tags" style="margin-left:5px">
+      
+        <span class="tag is-light is-danger">WeMos D1 Mini</span>
+      
+
+      
+
+      
+        
+          <span class="tag is-light is-warning">ESP8266</span>
+        
+      
+
+      
+
+      
+
+      
+
+      <!-- TODO -->
+      
+        
+        <span class="tag is-danger">TODO VIDEO</span>
+        
+
+        
+        <span class="tag is-success">TODO images</span>
+        
+      
+    </div>
+  </a>
+  
+</nav>
+:ET

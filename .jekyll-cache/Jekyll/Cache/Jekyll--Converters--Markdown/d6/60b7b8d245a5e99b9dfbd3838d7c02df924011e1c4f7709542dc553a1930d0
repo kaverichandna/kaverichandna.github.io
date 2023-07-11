@@ -1,0 +1,6 @@
+I"´<p>Sleep for 30 minutes and wakeup to make 10 LED blinks before going back to sleep again for another 30 minutes.</p>
+
+<p>Note that the <a href="https://github.com/arduino-libraries/ArduinoLowPower/issues/7">serial prints will not work after wakeup</a>. Hence use a USB to UART chip to get the <code class="language-plaintext highlighter-rouge">Serial1</code> prints. This is because during sleep, the entire USB peripheral also sleeps along with the MCU, except for the RTC.</p>
+
+<p>During sleep, only power indicator green LED <code class="language-plaintext highlighter-rouge">ON</code> will be lighted on the <a href="https://robotdyn.com/samd21-m0-mini.html">RobotDyn dev board</a>.</p>
+:ET

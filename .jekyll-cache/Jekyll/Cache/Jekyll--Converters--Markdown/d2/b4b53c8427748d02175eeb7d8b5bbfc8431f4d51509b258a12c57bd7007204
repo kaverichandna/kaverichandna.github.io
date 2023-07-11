@@ -1,0 +1,9 @@
+I"´<p>The 4 non-SPI pins are defined in <code class="language-plaintext highlighter-rouge">epdif.h</code> file:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Pin definition</span>
+<span class="cp">#define RST_PIN         2   // A0
+#define DC_PIN          3   // A1
+#define CS_PIN          4   // A2
+#define BUSY_PIN        5   // A3
+</span></code></pre></div></div>
+:ET

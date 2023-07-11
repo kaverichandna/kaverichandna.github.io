@@ -1,0 +1,17 @@
+I"|<p>Create options in using different variable values with <code class="language-plaintext highlighter-rouge">#define</code> statement. The advantage of this method is that the same codebase can be used for different options.</p>
+
+<h3 id="how-to-run-the-example">How to run the example</h3>
+
+<p>Run command <code class="language-plaintext highlighter-rouge">make a</code> to put the <code class="language-plaintext highlighter-rouge">LOCAL_ADDRESS</code> value as <code class="language-plaintext highlighter-rouge">0xAA</code>.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/define-options-console-a.png" alt="" /></p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">make b</code> to put the <code class="language-plaintext highlighter-rouge">LOCAL_ADDRESS</code> value as <code class="language-plaintext highlighter-rouge">0xBB</code>.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/define-options-console-b.png" alt="" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">make</code> command will run the <code class="language-plaintext highlighter-rouge">arduino-cli compile</code> with options to <code class="language-plaintext highlighter-rouge">#define</code> the <code class="language-plaintext highlighter-rouge">LOCAL_ADDRESS</code> and <code class="language-plaintext highlighter-rouge">DESTINATION_ADDRESS</code> values.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arduino-cli compile <span class="nt">--clean</span> <span class="nt">--fqbn</span> <span class="si">$(</span>BOARD<span class="si">)</span> <span class="nt">--build-property</span> compiler.cpp.extra_flags<span class="o">=</span><span class="s2">"-DLOCAL_ADDRESS=0xBB -DDESTINATION_ADDRESS=0xAA"</span> <span class="nt">--output-dir</span> <span class="si">$(</span>BUILD<span class="si">)</span> ./
+</code></pre></div></div>
+:ET

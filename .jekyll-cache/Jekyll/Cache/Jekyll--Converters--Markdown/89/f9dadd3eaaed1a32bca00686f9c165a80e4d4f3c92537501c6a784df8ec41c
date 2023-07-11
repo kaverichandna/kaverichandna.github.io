@@ -1,0 +1,26 @@
+I"�
+<ol>
+  <li>Open VS Code IDE</li>
+  <li>Plug in the dev board</li>
+  <li>In the command pallette, choose <code class="language-plaintext highlighter-rouge">ESP-IDF: Show example projects</code>
+  <a href="http://localhost:4000/assets/images/tutorials/hello-esp-idf-esp32s3-step2.png"><img src="http://localhost:4000/assets/images/tutorials/hello-esp-idf-esp32s3-step2.png" alt="" /></a></li>
+  <li>Choose <code class="language-plaintext highlighter-rouge">blink</code> as the example project
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-blink.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-blink.png" alt="" /></a></li>
+  <li>Choose port 🔌, device target, flash method ⭐️ and then build, flash and monitor 🔥 from the bottom green status bar.
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-build.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-build.png" alt="" /></a>
+    <ul>
+      <li>Choose port <code class="language-plaintext highlighter-rouge">/dev/cu.SLAB_USBtoUART</code> in the bottom green status bar icon 🔌
+<a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-port.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-port.png" alt="" /></a></li>
+      <li>Choose device target <code class="language-plaintext highlighter-rouge">esp32c3</code>
+<a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-device.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-device.png" alt="" /></a></li>
+      <li>Choose debugging via <code class="language-plaintext highlighter-rouge">ESP32-C3 chip via builtin USB-JTAG)</code>
+<a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-debugging.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-debugging.png" alt="" /></a></li>
+      <li>Choose <code class="language-plaintext highlighter-rouge">UART</code> as the flash method in the bottom green status bar icon ⭐️
+<a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-flash.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-flash.png" alt="" /></a></li>
+    </ul>
+  </li>
+  <li>Build, Flash and monitor in the bottom green status bar icon 🔥</li>
+  <li>Watch the serial monitor come up automatically in the terminal
+  <a href="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-all.png"><img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32c3-all.png" alt="" /></a></li>
+</ol>
+:ET

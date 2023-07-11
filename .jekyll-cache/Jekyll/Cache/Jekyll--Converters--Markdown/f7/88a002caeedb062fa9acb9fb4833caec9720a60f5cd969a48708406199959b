@@ -1,0 +1,24 @@
+I"	<p>Publish a UV Index value via BLE and view it on iPhone app nRF Connect.</p>
+
+<p>UV Index <a href="https://www.bluetooth.com/wp-content/uploads/Sitecore-Media-Library/Gatt/Xml/Characteristics/org.bluetooth.characteristic.uv_index.xml">GATT Characteristics</a>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Copyright 2014 Bluetooth SIG, Inc. All rights reserved. --&gt;</span>
+<span class="nt">&lt;Characteristic</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">"http://schemas.bluetooth.org/Documents/characteristic.xsd"</span> <span class="na">name=</span><span class="s">"UV Index"</span> <span class="na">type=</span><span class="s">"org.bluetooth.characteristic.uv_index"</span> <span class="na">uuid=</span><span class="s">"2A76"</span> <span class="na">last-modified=</span><span class="s">"2014-11-20"</span> <span class="na">approved=</span><span class="s">"Yes"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;Value&gt;</span>
+    <span class="nt">&lt;Field</span> <span class="na">name=</span><span class="s">"UV Index"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;Requirement&gt;</span>Mandatory<span class="nt">&lt;/Requirement&gt;</span>
+      <span class="nt">&lt;Format&gt;</span>uint8<span class="nt">&lt;/Format&gt;</span>
+      <span class="nt">&lt;Unit&gt;</span>org.bluetooth.unit.unitless<span class="nt">&lt;/Unit&gt;</span>
+      <span class="nt">&lt;DecimalExponent&gt;</span>0<span class="nt">&lt;/DecimalExponent&gt;</span>
+    <span class="nt">&lt;/Field&gt;</span>
+  <span class="nt">&lt;/Value&gt;</span>
+<span class="nt">&lt;/Characteristic&gt;</span>
+</code></pre></div></div>
+
+<p>Use the nRF Connect iPhone app to view the UV Index values.</p>
+
+<p><img src="http://localhost:4000/assets/images/tutorials/ble-uvi-nrf-connect.jpg" alt="" />
+<img src="http://localhost:4000/assets/images/tutorials/ble-uvi-nrf-connect-services.jpg" alt="" />
+<img src="http://localhost:4000/assets/images/tutorials/ble-uvi-nrf-connect-char.jpg" alt="" />
+<img src="http://localhost:4000/assets/images/tutorials/ble-uvi-nrf-connect-char-read.jpg" alt="" /></p>
+:ET

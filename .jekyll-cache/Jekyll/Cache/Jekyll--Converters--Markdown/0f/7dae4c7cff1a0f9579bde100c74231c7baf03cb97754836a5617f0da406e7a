@@ -1,0 +1,2 @@
+I"<p>This example contains a simple sketch to convert <code class="language-plaintext highlighter-rouge">millis()</code> to readable time format in days, hours, minutes and seconds. And then it prints out the time lapsed after the last print of the time.</p>
+:ET
