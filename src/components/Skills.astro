@@ -1,0 +1,28 @@
+---
+import ProgressBar from "./ProgressBar.astro"
+---
+<div class="w-full mb-20">
+    <div class="flex justify-center mb-10">
+            <div class="title text-center">
+                <h1 class="text-lg sm:text-xl md:text-2xl font-bold">Skills Expertisse</h1>
+                <p class="font-light"> Take a look at some of the things I love working on.
+            </p></div>
+    </div>
+    <div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <div>
+        <h2 class="text-md font-bold text-center">Devops</h2>
+        <ProgressBar title="Kitty Killa" level={5} />
+        <ProgressBar title="Kitty Killa" level={3} />
+        <ProgressBar title="Kitty Killa" level={1} />
+      </div>
+      <div>
+        <h2 class="text-md font-bold text-center">Devops</h2>
+        <ProgressBar title="Kitty Killa" level={5} />
+        <ProgressBar title="Kitty Killa" level={3} />
+        <ProgressBar title="Kitty Killa" level={1} />
+      </div>
+    </div>
+    </div>
+</div>
