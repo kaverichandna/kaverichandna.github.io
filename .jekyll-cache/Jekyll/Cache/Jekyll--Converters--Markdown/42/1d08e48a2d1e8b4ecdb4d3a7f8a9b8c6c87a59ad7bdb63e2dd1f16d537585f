@@ -1,4 +1,0 @@
-I"(<p>Turn on/off LED on-board <a href="https://github.com/webusb/arduino#compatible-hardware">compatible arduino hardware</a> through a button press in the browser on the laptop which is connected to the hardware.</p>
-
-<p>Use this firmware with the <a href="./webusb-receive">mcu firmware</a>.</p>
-:ET

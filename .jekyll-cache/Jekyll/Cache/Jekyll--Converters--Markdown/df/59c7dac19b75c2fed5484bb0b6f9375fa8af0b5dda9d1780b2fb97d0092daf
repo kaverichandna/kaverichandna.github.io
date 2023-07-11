@@ -1,17 +1,0 @@
-I"<p>Create a blinky LED with RobotDyn’s M0-Mini board which is compatible with Arduino firmware.</p>
-
-<p>For serial printing, <code class="language-plaintext highlighter-rouge">SerialUSB.println()</code> should be used instead of <code class="language-plaintext highlighter-rouge">Serial.println()</code> because <code class="language-plaintext highlighter-rouge">SerialUSB</code> uses the Native Port, which is an emulated serial port (USB-CDC).</p>
-
-<p>The following code should be used for initialising the serial so that the print statements can be viewed in the <code class="language-plaintext highlighter-rouge">setup()</code>:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SerialUSB</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-<span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">SerialUSB</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="some-errors-on-robotdyn-m0-mini-board">Some errors on RobotDyn M0 mini board</h2>
-
-<ul>
-  <li>Pins D2 (PA14) and D4 (PA08) are swapped</li>
-  <li>Pin D12 / MISO on ICSP header is PA12</li>
-</ul>
-:ET

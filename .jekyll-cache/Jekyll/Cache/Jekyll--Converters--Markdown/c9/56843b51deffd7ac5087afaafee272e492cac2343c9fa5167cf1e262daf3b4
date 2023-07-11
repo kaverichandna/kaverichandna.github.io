@@ -1,2 +1,0 @@
-I"á<p>Wakeup the Arduino UNO on interrupt. Press a button wired to <code class="language-plaintext highlighter-rouge">PIN 2</code> and short it to <code class="language-plaintext highlighter-rouge">GND</code> to wake it up.</p>
-:ET

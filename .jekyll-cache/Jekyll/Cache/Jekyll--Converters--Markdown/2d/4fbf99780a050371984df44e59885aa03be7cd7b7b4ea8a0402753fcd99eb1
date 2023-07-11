@@ -1,8 +1,0 @@
-I"Ë<ol>
-  <li>Use the VS Code editor, to build the example project <code class="language-plaintext highlighter-rouge">blink</code>.
-  <img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32s3-example-blink.png" alt="" /></li>
-  <li>Set the port, board, flash method.</li>
-  <li>Click the icon ðŸ”¥ to Build, Flash and Monitor.
-  <img src="http://localhost:4000/assets/images/tutorials/blinky-esp-idf-esp32s3-vscode.png" alt="" /></li>
-</ol>
-:ET

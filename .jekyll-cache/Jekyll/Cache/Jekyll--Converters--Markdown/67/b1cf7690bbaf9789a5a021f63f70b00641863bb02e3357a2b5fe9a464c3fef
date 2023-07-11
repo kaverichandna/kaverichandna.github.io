@@ -1,4 +1,0 @@
-I"<p>The on-board LED <code class="language-plaintext highlighter-rouge">LED_BUILTIN</code> is <code class="language-plaintext highlighter-rouge">GPIO8</code> as defined in the <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/hw-reference/esp32c3/user-guide-devkitm-1.html#pin-layout">pin out</a>.</p>
-
-<p>Compile and upload the firmware via the Arduino IDE or <code class="language-plaintext highlighter-rouge">arduino-cli</code> with <code class="language-plaintext highlighter-rouge">Makefile</code>.</p>
-:ET

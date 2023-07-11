@@ -1,6 +1,0 @@
-I"¼<p>How long can ESP8266 sleep? This firmware code will test it out.</p>
-
-<p>If only ESP8266 is used, short pin <code class="language-plaintext highlighter-rouge">D0</code> to pin <code class="language-plaintext highlighter-rouge">RST</code> to enable wakeup. Then connect the USB power to a WeMos module, open the serial monitor and wait for the console to show wakeup.</p>
-
-<p>It wakes up about <strong>3 hours, 45 minutes</strong> later.</p>
-:ET

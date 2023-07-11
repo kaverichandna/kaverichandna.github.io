@@ -1,2 +1,0 @@
-I"<p>Send a <code class="language-plaintext highlighter-rouge">POST</code> request to IFTTT cloud. Ensure IFTTT is first setup via the <a href="https://ifttt.com/maker_webhooks">Webhooks</a> and the get the <a href="https://ifttt.com/services/maker_webhooks/settings">webhook key</a>.</p>
-:ET

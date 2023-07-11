@@ -1,2 +1,0 @@
-I"<p>Wake up periodically after a specified time. Short <code class="language-plaintext highlighter-rouge">RST</code> and <code class="language-plaintext highlighter-rouge">GPIO012</code> on ESP (or <code class="language-plaintext highlighter-rouge">D6</code> on WeMos).</p>
-:ET
