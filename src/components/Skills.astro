@@ -4,30 +4,29 @@ import ProgressBar from "./ProgressBar.astro"
 <div class="w-full mb-20">
     <div class="flex justify-left mb-10">
             <div class="title text-left">
-                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">Skills Expertise</h1>
-                <p class="font-light "> A skill level assesment on a Likert Scale
-            </p></div>
+                <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">Skills Assesment</h1>
+                </div>
     </div>
     <div>
 
     <div class="grid md:grid-cols-3 gap-20">
       <div>
-        <h2 class="text-lg mb-4 font-bold text-center">Devops</h2>
+        <h2 class="text-lg mb-4 font-bold">Devops</h2>
         <ProgressBar title="Databases (SQL)" level={5} />
         <ProgressBar title="Servers (Linux / Bash)" level={3} />
         <ProgressBar title="Big Data (HIVE / Spark)" level={1} />
       </div>
       <div>
-        <h2 class="text-lg mb-4 font-bold text-center">Machine Learning</h2>
+        <h2 class="text-lg mb-4 font-bold">Machine Learning</h2>
         <ProgressBar title="Python" level={5} />
         <ProgressBar title="Computer Vision (TensorFlow)" level={2} />
         <ProgressBar title="NLP (Spacy / TensorFlow)" level={1} />
       </div>
       <div>
-        <h2 class="text-lg mb-4 font-bold text-center">Data Analytics</h2>
+        <h2 class="text-lg mb-4 font-bold">Data Analytics</h2>
         <ProgressBar title="Visualization (Tableau/Power BI)" level={3} />
         <ProgressBar title="SAS" level={1} />
-        <ProgressBar title="R" level={1} />
+        <ProgressBar title="R Studio" level={1} />
       </div>
     </div>
     </div>
