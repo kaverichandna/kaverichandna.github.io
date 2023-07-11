@@ -8,10 +8,13 @@ export interface Props {
 const {title, description, icon} = Astro.props as Props;
 ---
 
-<div class="card bg-clip-text hover:text-transparent hover:bg-gradient-to-r from-primary-focus to-secondary">
-  <div class="card-body text-center">
+<div class="card bg-clip-text group hover:text-transparent hover:bg-gradient-to-r from-primary-focus to-secondary">
+  <div class="card-body flex text-center">
+
     <span class={`lnr ${icon} text-center text-2xl`}></span>
+      <div>
     <h4 class="font-bold text-lg text-center">{title}</h4>
-    <p class="font-light opacity-70 text-center"> {description} </p>
+    <p class="font-light opacity-70 group-hover:text-primary text-center"> {description} </p>
+      </div>
   </div>
 </div>
